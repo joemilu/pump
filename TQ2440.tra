@@ -1,0 +1,34 @@
+*** Creating Trace Output File 'TQ2440.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"2440init.o"'
+### List of Objects: adding '"2440slib.o"'
+### List of Objects: adding '"nand.o"'
+### List of Objects: adding '"2440lib.o"'
+### List of Objects: adding '"adc.o"'
+### List of Objects: adding '"keyscan.o"'
+### List of Objects: adding '"lcd_tft.o"'
+### List of Objects: adding '"main.o"'
+### List of Objects: adding '"memtest.o"'
+### List of Objects: adding '"mmu.o"'
+### List of Objects: adding '"pic.o"'
+### List of Objects: adding '"profile.o"'
+### List of Objects: adding '"rtc.o"'
+### List of Objects: adding '"sd_mmc.o"'
+### List of Objects: adding '"touchpanel.o"'
+### List of Objects: adding '"tq_logo.o"'
+### ADS-LD Command completed:
+--cpu ARM920T "2440init.o" "2440slib.o" "nand.o" "2440lib.o" "adc.o" "keyscan.o" "lcd_tft.o" "main.o" "memtest.o" "mmu.o" "pic.o" "profile.o" "rtc.o" "sd_mmc.o" "touchpanel.o" "tq_logo.o" --strict --scatter ".\config\RunInSDRAM.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\TQ2440.map" -o "TQ2440.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'TQ2440.axf'
+### ADS-LD Command File: 'TQ2440.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'TQ2440.lnp', Handle=0x000002E8
+### Writing '.lnp' file
+### ADS-LD Command file 'TQ2440.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.
