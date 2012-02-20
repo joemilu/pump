@@ -3,3 +3,12 @@
 *.d
 *.crf
 *.bin
+*.lst
+*.htm
+*.map
+TQ2440.hex
+TQ2440_Target 1.dep
+TQ2440.axf
+TQ2440.lnp
+TQ2440.tra
+TQ2440.plg

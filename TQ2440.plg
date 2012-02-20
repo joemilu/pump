@@ -9,3 +9,274 @@ Project File Date:  02/20/2012
 <h2>Output:</h2>
 Clean started: Project: 'TQ2440'
    deleting intermediate output files for target 'Target 1'
+Build target 'Target 1'
+assembling 2440init.s...
+src\2440init.s(396): warning: A1876W: Use of '|' as a synonym for the :OR: operator is deprecated.
+src\2440init.s:   396 000002e4  orr r1,r0,#UNDEFMODE|NOINT
+src\2440init.s(419): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440init.s:   419 00000324  mov pc,lr
+src\2440init.s(491): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440init.s:     at line 46 in macro MOV_PC_LR in 'src\2440init.s'
+src\2440init.s: 
+src\2440init.s:    46 00000418      mov pc,lr
+src\2440init.s(541): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440init.s:   541 00000494  mov pc,r0
+src\2440init.s(573): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440init.s:   573 000004e4  mov     pc, lr
+src\2440init.s(597): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440init.s:   597 00000534  mov     pc, lr
+src\2440init.s: 0 Errors, 6 Warnings
+assembling 2440slib.s...
+src\2440slib.s(35): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000010        mov pc,lr
+src\2440slib.s(41): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 0000001c        mov pc,lr
+src\2440slib.s(54): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000030        mov pc,lr
+src\2440slib.s(61): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000038        mov pc,lr
+src\2440slib.s(71): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000048        mov pc,lr
+src\2440slib.s(75): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000050        mov pc,lr
+src\2440slib.s(79): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000058        mov pc,lr
+src\2440slib.s(98): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000068        mov pc,lr
+src\2440slib.s(106): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000078        mov pc,lr
+src\2440slib.s(114): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000088        mov pc,lr
+src\2440slib.s(122): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000098        mov pc,lr
+src\2440slib.s(130): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 000000a8        mov pc,lr
+src\2440slib.s(138): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 000000b8        mov pc,lr
+src\2440slib.s(146): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 000000c8        mov pc,lr
+src\2440slib.s(154): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 000000d8        mov pc,lr
+src\2440slib.s(163): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 000000e8        mov pc,lr
+src\2440slib.s(172): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 000000f8        mov pc,lr
+src\2440slib.s(182): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000100        mov pc,lr
+src\2440slib.s(192): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000108        mov pc,lr
+src\2440slib.s(201): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000110        mov pc,lr
+src\2440slib.s(207): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000118        mov pc,lr
+src\2440slib.s(214): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000120        mov pc,lr
+src\2440slib.s(221): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000128        mov pc,lr
+src\2440slib.s(227): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000130        mov pc,lr
+src\2440slib.s(234): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000138        mov pc,lr
+src\2440slib.s(241): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000140        mov pc,lr
+src\2440slib.s(248): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000148        mov pc,lr
+src\2440slib.s(255): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000150        mov pc,lr
+src\2440slib.s(262): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000158        mov pc,lr
+src\2440slib.s(268): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000160        mov pc,lr
+src\2440slib.s(277): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000168        mov pc,lr
+src\2440slib.s(283): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000170        mov pc,lr
+src\2440slib.s(290): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000178        mov pc,lr
+src\2440slib.s(296): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000180        mov pc,lr
+src\2440slib.s(303): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000188        mov pc,lr
+src\2440slib.s(313): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000190        mov pc,lr
+src\2440slib.s(320): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 00000198        mov pc,lr
+src\2440slib.s(330): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 000001a0        mov pc,lr
+src\2440slib.s(337): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 000001a8        mov pc,lr
+src\2440slib.s(347): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
+src\2440slib.s: 
+src\2440slib.s:    24 000001b0        mov pc,lr
+src\2440slib.s: 0 Errors, 40 Warnings
+compiling nand.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+.\inc\2440slib.h(63): warning:  #1-D: last line of file ends without a newline
+src\nand.c(36): warning:  #550-D: variable "pMID" was set but never used
+src\nand.c(38): warning:  #550-D: variable "nBuff" was set but never used
+src\nand.c(39): warning:  #550-D: variable "n4thcycle" was set but never used
+compiling 2440lib.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+.\inc\2440slib.h(63): warning:  #1-D: last line of file ends without a newline
+compiling Adc.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+.\inc\2440slib.h(63): warning:  #1-D: last line of file ends without a newline
+compiling keyscan.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+.\inc\2440slib.h(63): warning:  #1-D: last line of file ends without a newline
+compiling LCD_TFT.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+.\inc\2440slib.h(63): warning:  #1-D: last line of file ends without a newline
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+.\inc\2440slib.h(63): warning:  #1-D: last line of file ends without a newline
+src\Main.c(148): warning:  #550-D: variable "mode" was set but never used
+src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
+compiling memtest.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+.\inc\2440slib.h(63): warning:  #1-D: last line of file ends without a newline
+compiling mmu.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+.\inc\2440slib.h(63): warning:  #1-D: last line of file ends without a newline
+compiling Pic.c...
+src\Pic.c(43458): warning:  #1-D: last line of file ends without a newline
+compiling profile.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+.\inc\2440slib.h(63): warning:  #1-D: last line of file ends without a newline
+src\profile.c(36): warning:  #177-D: variable "divider" was declared but never referenced
+compiling RTC.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+.\inc\2440slib.h(63): warning:  #1-D: last line of file ends without a newline
+compiling SD_MMC.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling Touchpanel.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(152): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(155): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(175): warning:  #61-D: integer operation result is out of range
+compiling TQ_LOGO.c...
+linking...
+Program Size: Code=29364 RO-data=656 RW-data=768176 ZI-data=769112  
+FromELF: creating hex file...
+User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
+"TQ2440.axf" - 0 Error(s), 119 Warning(s).
