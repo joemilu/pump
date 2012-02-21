@@ -319,9 +319,9 @@ void Paint_Bmp(int x0,int y0,int h,int l,unsigned char bmp[])
 	U32 c;
 	int p = 0;
 	
-    for( y = y0 ; y < l ; y++ )
+    for( y = 0 ; y < l ; y++ )
     {
-    	for( x = x0 ; x < h ; x++ )
+    	for( x = 0 ; x < h ; x++ )
     	{
     		c = bmp[p+1] | (bmp[p]<<8) ;
 

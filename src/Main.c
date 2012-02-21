@@ -14,6 +14,7 @@
 #include "mmu.h"
 #include "profile.h"
 #include "memtest.h"
+#include "data.h"
 
 extern char Image$$ER_ROM1$$RO$$Limit[];
 extern char Image$$ER_ROM1$$RO$$Base[];
@@ -56,7 +57,6 @@ volatile U32 totalDmaCount;
 
 volatile int isUsbdSetConfiguration;
 
-int download_run=0;
 U32 tempDownloadAddress;
 int menuUsed=0;
 
@@ -66,6 +66,71 @@ int consoleNum;
 
 static U32 cpu_freq;
 static U32 UPLL;
+
+
+struct SYSTEM_STAT{
+	uint  interface;			//所处界面
+	uint refresh;
+};
+
+struct THERAPY_CONFIG{
+	float compress_ratio; 	//压缩比
+	double volume;		    //压缩总量
+	uint heart_beat;		
+};
+
+struct TOUCH_STAT{
+	uint xpoint,ypoint;		//屏幕位置
+	uint xdata,ydata;  		//ts采样值
+};
+
+//按钮状态
+struct BUTTOMS{
+	uint start;		//开始工作
+	uint stop; 		//结束工作
+};
+
+struct DATA_STAT{
+	uint index;
+};
+
+struct AD_STAT{
+	uint ad_raw;
+};
+
+struct HEAT_STAT{
+	uint Max;//最大值
+	uint Period;//周期
+	uint Min;//最小值
+	uint RelaxPeriod;//舒缓期长度
+	uint Ave; //平均值
+//	uint useful;//数据是够有效
+	uint updown;//0->上升期 1->下降期
+	uint ClosePoint;
+	float delt[2];	 //delta值，[0]上一次的值，[1]现值
+	uint rate;	//心率
+};
+
+struct PUMP_STAT{
+	uint direction;
+	uint step;
+	uint pwm_rate;
+	uint stat;
+	uint pos;
+};
+
+
+struct	SYSTEM_STAT sys_stat;
+struct	THERAPY_CONFIG theo_conf;
+struct	TOUCH_STAT touch_stat;
+struct	BUTTOMS buttoms;
+struct	DATA_STAT rawdata;
+struct	DATA_STAT filtereddata;
+struct	AD_STAT ad_stat;
+struct	HEAT_STAT heart_stat;
+struct	PUMP_STAT pump_stat;
+
+
 static void cal_cpu_bus_clk(void)
 {
 	U32 val;
@@ -124,28 +189,17 @@ static void cal_cpu_bus_clk(void)
 	UCLK = (rCLKDIVN&8)?(UPLL>>1):UPLL;
 }
 
+uint read(void);
+void default_values(void);
+uint default_hardware(void);
 
-void Temp_function() { Uart_Printf("\nPlease input 1-11 to select test!!!\n"); }
+void __irq Timer0_ISR(void);
+void __irq Timer2_ISR(void);
 
-struct {
-	void (*fun)(void);
-	char *tip;
-}CmdTip[] = {
-				{ Temp_function, "Please input 1-11 to select test" } ,
-				{ BUZZER_PWM_Test, "Test PWM" } ,
-				{ RTC_Display, "RTC time display" } ,
-				{ Test_Adc, "Test ADC" } ,
-				{ KeyScan_Test, "Test interrupt and key scan" } ,
-				{ Test_Touchpanel, "Test Touchpanel" } ,
-				{ Lcd_TFT_Test, "Test TFT LCD" } ,
-				{ Test_SDI, "Test SD Card" } ,
-				{ 0, 0}						
-			};
 
 
 void Main(void)
 {
-	char *mode;
 	int i;
 	U8 key;
 	U32 mpll_val = 0 ;
@@ -188,17 +242,15 @@ void Main(void)
 	ChangeClockDivider(key, 12);
 	cal_cpu_bus_clk();
 	
-	consoleNum = 0;	// Uart 1 select for debug.
-	Uart_Init( 0,115200 );
-	Uart_Select( consoleNum );
+
 	
 	Beep(2000, 100);
 	
 	Uart_SendByte('\n');
 	Uart_Printf("<***************************************>\n");
-	Uart_Printf("               TQ2440 Test Program!\n");
-	Uart_Printf("                www.embedsky.net!\n");
-	Uart_Printf("                Edit in MDK4.12,by:freenl!\n");
+	Uart_Printf("               LVAD SYSTEM BETA!\n");
+	Uart_Printf("                SJTU BME !\n");
+	Uart_Printf("                Edit in MDK4.12,by:joe!\n");
 //	Uart_Printf("      Build time is: %s  %s\n", __DATE__ , __TIME__  );
 	Uart_Printf("<***************************************>\n");
 
@@ -218,31 +270,20 @@ void Main(void)
 
 	Led_Display(0x66);
 
-	mode="DMA";
 
 	Clk0_Disable();
 	Clk1_Disable();
 	
 	mpll_val = rMPLLCON;
 
-	Lcd_TFT_Init() ;		// LCD initial
+
 	
-	download_run=1; //The default menu is the Download & Run mode.
+	pISR_FIQ = (int)Timer2_ISR;
+	pISR_TIMER0 = (int)Timer0_ISR;
 
 	while(1)
 	{
-		U8 idx;
-		
-		Uart_Printf("\nPlease select function : \n");	
-		for(i=0; CmdTip[i].fun!=0; i++)
-			Uart_Printf("%d : %s\n", i, CmdTip[i].tip);
-		idx = Uart_GetIntNum_GJ() ;	
-		if(idx<i)
-		{
-			(*CmdTip[idx].fun)();
-			Delay(20);
-			Uart_Init( 0,115200 );
-		}	
+
 	}	  	
 
 }
@@ -319,3 +360,83 @@ void Clk1_Disable(void)
 	rGPHCON = rGPHCON&~(3<<20);	// GPH10 Input
 }
 
+
+
+void __irq Timer0_ISR(void) 
+{
+
+}
+
+void __irq Timer2_ISR(void)
+{
+
+}
+
+uint read()
+{
+	static uint cnt = 0;
+	if(cnt == 5000)
+		cnt = 0;
+	return 	data[cnt++];
+}
+
+void callback_bt_start()
+{
+
+}
+
+uint myinit()
+{
+//初始化
+	default_values();
+	if(!default_hardware())
+		goto fail;
+	return SUCCESS;
+fail:
+	return FAIL;
+}
+
+void default_values()
+{
+	sys_stat.interface = 0;
+	sys_stat.refresh = 0;
+	theo_conf.compress_ratio = DEFAULT_CR;
+	theo_conf.volume = DEFAULT_VO;
+	theo_conf.heart_beat = DEFAULT_HB;
+	touch_stat.xpoint = 0;
+	touch_stat.ypoint = 0;		//屏幕位置
+	touch_stat.xdata = 0;
+	touch_stat.ydata = 0; 
+	buttoms.start = B_OFF;
+	buttoms.stop = B_OFF;
+	rawdata.index = 0;
+	ad_stat.ad_raw = 0;
+	heart_stat.Max = 0;//最大值
+	heart_stat.Period = 0;//周期
+	heart_stat.Min = 50000;//最小值
+	heart_stat.RelaxPeriod = 0;//舒缓期长度
+	heart_stat.Ave = 0; //平均值
+	heart_stat.updown = BOTTOM;//0->上升期 1->下降期
+	heart_stat.ClosePoint = 0;
+	heart_stat.delt[0] = 0;	 //delta值，[0]上一次的值，[1]现值
+	heart_stat.delt[1] = 0;
+	heart_stat.rate = 0;	//心率 
+}
+
+uint default_hardware()
+{
+//io
+//timer	  
+//LCD
+	Lcd_TFT_Init() ;		// LCD initial
+
+//ad/touch
+//uart
+	consoleNum = 0;	// Uart 1 select for debug.
+	Uart_Init( 0,115200 );
+	Uart_Select( consoleNum );
+//中断
+	return SUCCESS;
+fail:
+	return FAIL;
+} 

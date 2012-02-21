@@ -280,3 +280,870 @@ Program Size: Code=29364 RO-data=656 RW-data=768176 ZI-data=769112
 FromELF: creating hex file...
 User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
 "TQ2440.axf" - 0 Error(s), 119 Warning(s).
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+.\inc\2440slib.h(63): warning:  #1-D: last line of file ends without a newline
+src\Main.c(211): error:  #20: identifier "download_run" is undefined
+src\Main.c(129): warning:  #550-D: variable "mode" was set but never used
+src\Main.c(66): warning:  #550-D: variable "cpu_freq" was set but never used
+src\Main.c - 1 Error(s), 7 Warning(s).
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+.\inc\2440slib.h(63): warning:  #1-D: last line of file ends without a newline
+src\Main.c(129): warning:  #550-D: variable "mode" was set but never used
+src\Main.c(66): warning:  #550-D: variable "cpu_freq" was set but never used
+src\Main.c - 0 Error(s), 7 Warning(s).
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Main.c(201): error:  #20: identifier "mode" is undefined
+src\Main.c(66): warning:  #550-D: variable "cpu_freq" was set but never used
+src\Main.c - 1 Error(s), 5 Warning(s).
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Main.c(66): warning:  #550-D: variable "cpu_freq" was set but never used
+src\Main.c - 0 Error(s), 5 Warning(s).
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Main.c(66): warning:  #550-D: variable "cpu_freq" was set but never used
+src\Main.c - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+assembling 2440init.s...
+src\2440init.s(396): warning: A1876W: Use of '|' as a synonym for the :OR: operator is deprecated.
+src\2440init.s:   396 000002e4  orr r1,r0,#UNDEFMODE|NOINT
+src\2440init.s(419): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440init.s:   419 00000324  mov pc,lr
+src\2440init.s(491): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440init.s:     at line 46 in macro MOV_PC_LR in 'src\2440init.s'
+src\2440init.s: 
+src\2440init.s:    46 00000418      mov pc,lr
+src\2440init.s(541): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440init.s:   541 00000494  mov pc,r0
+src\2440init.s(573): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440init.s:   573 000004e4  mov     pc, lr
+src\2440init.s(597): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440init.s:   597 00000534  mov     pc, lr
+src\2440init.s: 0 Errors, 6 Warnings
+compiling nand.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\nand.c(36): warning:  #550-D: variable "pMID" was set but never used
+src\nand.c(38): warning:  #550-D: variable "nBuff" was set but never used
+src\nand.c(39): warning:  #550-D: variable "n4thcycle" was set but never used
+compiling 2440lib.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling Adc.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling keyscan.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling LCD_TFT.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling memtest.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling mmu.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling profile.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\profile.c(36): warning:  #177-D: variable "divider" was declared but never referenced
+compiling RTC.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+linking...
+Program Size: Code=21068 RO-data=516 RW-data=768080 ZI-data=768024  
+FromELF: creating hex file...
+User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
+"TQ2440.axf" - 0 Error(s), 46 Warning(s).
+Build target 'Target 1'
+compiling nand.c...
+.\inc\def.h(101): error:  #169: expected a declaration
+.\inc\def.h(105): error:  #169: expected a declaration
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\nand.c(36): warning:  #550-D: variable "pMID" was set but never used
+src\nand.c(38): warning:  #550-D: variable "nBuff" was set but never used
+src\nand.c(39): warning:  #550-D: variable "n4thcycle" was set but never used
+compiling 2440lib.c...
+.\inc\def.h(101): error:  #169: expected a declaration
+.\inc\def.h(105): error:  #169: expected a declaration
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling Adc.c...
+.\inc\def.h(101): error:  #169: expected a declaration
+.\inc\def.h(105): error:  #169: expected a declaration
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling keyscan.c...
+.\inc\def.h(101): error:  #169: expected a declaration
+.\inc\def.h(105): error:  #169: expected a declaration
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling LCD_TFT.c...
+.\inc\def.h(101): error:  #169: expected a declaration
+.\inc\def.h(105): error:  #169: expected a declaration
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling Main.c...
+.\inc\def.h(101): error:  #169: expected a declaration
+.\inc\def.h(105): error:  #169: expected a declaration
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Main.c(66): warning:  #550-D: variable "cpu_freq" was set but never used
+compiling memtest.c...
+.\inc\def.h(101): error:  #169: expected a declaration
+.\inc\def.h(105): error:  #169: expected a declaration
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling mmu.c...
+.\inc\def.h(101): error:  #169: expected a declaration
+.\inc\def.h(105): error:  #169: expected a declaration
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling profile.c...
+.\inc\def.h(101): error:  #169: expected a declaration
+.\inc\def.h(105): error:  #169: expected a declaration
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\profile.c(36): warning:  #177-D: variable "divider" was declared but never referenced
+compiling RTC.c...
+.\inc\def.h(101): error:  #169: expected a declaration
+.\inc\def.h(105): error:  #169: expected a declaration
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling SD_MMC.c...
+.\inc\def.h(101): error:  #169: expected a declaration
+.\inc\def.h(105): error:  #169: expected a declaration
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling Touchpanel.c...
+.\inc\def.h(101): error:  #169: expected a declaration
+.\inc\def.h(105): error:  #169: expected a declaration
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(152): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(155): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(175): warning:  #61-D: integer operation result is out of range
+Target not created
+Build target 'Target 1'
+compiling nand.c...
+.\inc\def.h(104): error:  #20: identifier "unint" is undefined
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\nand.c(36): warning:  #550-D: variable "pMID" was set but never used
+src\nand.c(38): warning:  #550-D: variable "nBuff" was set but never used
+src\nand.c(39): warning:  #550-D: variable "n4thcycle" was set but never used
+compiling 2440lib.c...
+.\inc\def.h(104): error:  #20: identifier "unint" is undefined
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling Adc.c...
+.\inc\def.h(104): error:  #20: identifier "unint" is undefined
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling keyscan.c...
+.\inc\def.h(104): error:  #20: identifier "unint" is undefined
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling LCD_TFT.c...
+.\inc\def.h(104): error:  #20: identifier "unint" is undefined
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling Main.c...
+.\inc\def.h(104): error:  #20: identifier "unint" is undefined
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Main.c(66): warning:  #550-D: variable "cpu_freq" was set but never used
+compiling memtest.c...
+.\inc\def.h(104): error:  #20: identifier "unint" is undefined
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling mmu.c...
+.\inc\def.h(104): error:  #20: identifier "unint" is undefined
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling profile.c...
+.\inc\def.h(104): error:  #20: identifier "unint" is undefined
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\profile.c(36): warning:  #177-D: variable "divider" was declared but never referenced
+compiling RTC.c...
+.\inc\def.h(104): error:  #20: identifier "unint" is undefined
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling SD_MMC.c...
+.\inc\def.h(104): error:  #20: identifier "unint" is undefined
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling Touchpanel.c...
+.\inc\def.h(104): error:  #20: identifier "unint" is undefined
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(152): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(155): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(175): warning:  #61-D: integer operation result is out of range
+Target not created
+Build target 'Target 1'
+compiling nand.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\nand.c(36): warning:  #550-D: variable "pMID" was set but never used
+src\nand.c(38): warning:  #550-D: variable "nBuff" was set but never used
+src\nand.c(39): warning:  #550-D: variable "n4thcycle" was set but never used
+compiling 2440lib.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling Adc.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling keyscan.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling LCD_TFT.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Main.c(66): warning:  #550-D: variable "cpu_freq" was set but never used
+compiling memtest.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling mmu.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling profile.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\profile.c(36): warning:  #177-D: variable "divider" was declared but never referenced
+compiling RTC.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling SD_MMC.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling Touchpanel.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(152): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(155): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(175): warning:  #61-D: integer operation result is out of range
+linking...
+TQ2440.axf: Error: L6200E: Symbol theo_conf multiply defined (by 2440lib.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol theo_conf multiply defined (by adc.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol theo_conf multiply defined (by keyscan.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol theo_conf multiply defined (by lcd_tft.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol theo_conf multiply defined (by main.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol theo_conf multiply defined (by memtest.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol theo_conf multiply defined (by mmu.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol theo_conf multiply defined (by profile.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol theo_conf multiply defined (by rtc.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol theo_conf multiply defined (by sd_mmc.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol theo_conf multiply defined (by touchpanel.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol ts_data multiply defined (by 2440lib.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol ts_data multiply defined (by adc.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol ts_data multiply defined (by keyscan.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol ts_data multiply defined (by lcd_tft.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol ts_data multiply defined (by main.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol ts_data multiply defined (by memtest.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol ts_data multiply defined (by mmu.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol ts_data multiply defined (by profile.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol ts_data multiply defined (by rtc.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol ts_data multiply defined (by sd_mmc.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol ts_data multiply defined (by touchpanel.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol heat_stat multiply defined (by 2440lib.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol heat_stat multiply defined (by adc.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol heat_stat multiply defined (by keyscan.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol heat_stat multiply defined (by lcd_tft.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol heat_stat multiply defined (by main.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol heat_stat multiply defined (by memtest.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol heat_stat multiply defined (by mmu.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol heat_stat multiply defined (by profile.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol heat_stat multiply defined (by rtc.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol heat_stat multiply defined (by sd_mmc.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol heat_stat multiply defined (by touchpanel.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol pump_stat multiply defined (by 2440lib.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol pump_stat multiply defined (by adc.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol pump_stat multiply defined (by keyscan.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol pump_stat multiply defined (by lcd_tft.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol pump_stat multiply defined (by main.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol pump_stat multiply defined (by memtest.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol pump_stat multiply defined (by mmu.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol pump_stat multiply defined (by profile.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol pump_stat multiply defined (by rtc.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol pump_stat multiply defined (by sd_mmc.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol pump_stat multiply defined (by touchpanel.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol sys_sta multiply defined (by 2440lib.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol sys_sta multiply defined (by adc.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol sys_sta multiply defined (by keyscan.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol sys_sta multiply defined (by lcd_tft.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol sys_sta multiply defined (by main.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol sys_sta multiply defined (by memtest.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol sys_sta multiply defined (by mmu.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol sys_sta multiply defined (by profile.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol sys_sta multiply defined (by rtc.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol sys_sta multiply defined (by sd_mmc.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol sys_sta multiply defined (by touchpanel.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol buttoms multiply defined (by 2440lib.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol buttoms multiply defined (by adc.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol buttoms multiply defined (by keyscan.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol buttoms multiply defined (by lcd_tft.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol buttoms multiply defined (by main.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol buttoms multiply defined (by memtest.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol buttoms multiply defined (by mmu.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol buttoms multiply defined (by profile.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol buttoms multiply defined (by rtc.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol buttoms multiply defined (by sd_mmc.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol buttoms multiply defined (by touchpanel.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol data_index multiply defined (by 2440lib.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol data_index multiply defined (by adc.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol data_index multiply defined (by keyscan.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol data_index multiply defined (by lcd_tft.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol data_index multiply defined (by main.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol data_index multiply defined (by memtest.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol data_index multiply defined (by mmu.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol data_index multiply defined (by profile.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol data_index multiply defined (by rtc.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol data_index multiply defined (by sd_mmc.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol data_index multiply defined (by touchpanel.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol ad_stat multiply defined (by 2440lib.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol ad_stat multiply defined (by adc.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol ad_stat multiply defined (by keyscan.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol ad_stat multiply defined (by lcd_tft.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol ad_stat multiply defined (by main.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol ad_stat multiply defined (by memtest.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol ad_stat multiply defined (by mmu.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol ad_stat multiply defined (by profile.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol ad_stat multiply defined (by rtc.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol ad_stat multiply defined (by sd_mmc.o and nand.o).
+TQ2440.axf: Error: L6200E: Symbol ad_stat multiply defined (by touchpanel.o and nand.o).
+Target not created
+Build target 'Target 1'
+compiling nand.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\nand.c(36): warning:  #550-D: variable "pMID" was set but never used
+src\nand.c(38): warning:  #550-D: variable "nBuff" was set but never used
+src\nand.c(39): warning:  #550-D: variable "n4thcycle" was set but never used
+compiling 2440lib.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling Adc.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling keyscan.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling LCD_TFT.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Main.c(66): warning:  #550-D: variable "cpu_freq" was set but never used
+compiling memtest.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling mmu.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling profile.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\profile.c(36): warning:  #177-D: variable "divider" was declared but never referenced
+compiling RTC.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling SD_MMC.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling Touchpanel.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(152): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(155): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(175): warning:  #61-D: integer operation result is out of range
+linking...
+Program Size: Code=21068 RO-data=516 RW-data=768080 ZI-data=768024  
+FromELF: creating hex file...
+User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
+"TQ2440.axf" - 0 Error(s), 61 Warning(s).
+Build target 'Target 1'
+compiling nand.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\nand.c(36): warning:  #550-D: variable "pMID" was set but never used
+src\nand.c(38): warning:  #550-D: variable "nBuff" was set but never used
+src\nand.c(39): warning:  #550-D: variable "n4thcycle" was set but never used
+compiling 2440lib.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling Adc.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling keyscan.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling LCD_TFT.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Main.c(121): error:  #20: identifier "SYSTEM_STAT" is undefined
+src\Main.c(122): error:  #20: identifier "THERAPY_CONFIG" is undefined
+src\Main.c(123): error:  #20: identifier "TOUCH_STAT" is undefined
+src\Main.c(124): error:  #20: identifier "BUTTOMS" is undefined
+src\Main.c(125): error:  #20: identifier "DATA_INDEX" is undefined
+src\Main.c(126): error:  #20: identifier "AD_STAT" is undefined
+src\Main.c(127): error:  #20: identifier "HEAT_STAT" is undefined
+src\Main.c(128): error:  #20: identifier "PUMP_STAT" is undefined
+src\Main.c(66): warning:  #550-D: variable "cpu_freq" was set but never used
+compiling memtest.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling mmu.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling profile.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\profile.c(36): warning:  #177-D: variable "divider" was declared but never referenced
+compiling RTC.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling SD_MMC.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling Touchpanel.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(152): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(155): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(175): warning:  #61-D: integer operation result is out of range
+Target not created
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Main.c(66): warning:  #550-D: variable "cpu_freq" was set but never used
+src\Main.c - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=21068 RO-data=516 RW-data=768100 ZI-data=768024  
+FromELF: creating hex file...
+User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
+"TQ2440.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Main.c(66): warning:  #550-D: variable "cpu_freq" was set but never used
+linking...
+Program Size: Code=21068 RO-data=516 RW-data=768104 ZI-data=768024  
+FromELF: creating hex file...
+User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
+"TQ2440.axf" - 0 Error(s), 5 Warning(s).
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+.\inc\data.h(14): warning:  #1-D: last line of file ends without a newline
+src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
+src\Main.c - 0 Error(s), 6 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=21148 RO-data=24180 RW-data=768108 ZI-data=768024  
+FromELF: creating hex file...
+User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
+"TQ2440.axf" - 0 Error(s), 0 Warning(s).
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+.\inc\data.h(14): warning:  #1-D: last line of file ends without a newline
+src\Main.c(281): error:  #20: identifier "Timer2_ISR" is undefined
+src\Main.c(282): error:  #20: identifier "Timer0_ISR" is undefined
+src\Main.c(373): warning:  #1-D: last line of file ends without a newline
+src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
+src\Main.c - 2 Error(s), 7 Warning(s).
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+.\inc\data.h(14): warning:  #1-D: last line of file ends without a newline
+src\Main.c(191): warning:  #1295-D: Deprecated declaration read - give arg types
+src\Main.c(373): warning:  #1295-D: Deprecated declaration read - give arg types
+src\Main.c(374): error:  #169: expected a declaration
+src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
+src\Main.c - 1 Error(s), 8 Warning(s).
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+.\inc\data.h(14): warning:  #1-D: last line of file ends without a newline
+src\Main.c(191): warning:  #1295-D: Deprecated declaration read - give arg types
+src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
+src\Main.c - 0 Error(s), 7 Warning(s).
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+.\inc\data.h(14): warning:  #1-D: last line of file ends without a newline
+src\Main.c(192): warning:  #1295-D: Deprecated declaration read - give arg types
+src\Main.c(391): warning:  #940-D: missing return statement at end of non-void function "myinit"
+src\Main.c(415): error:  #29: expected an expression
+src\Main.c(415): warning:  #175-D: subscript out of range
+src\Main.c(425): warning:  #940-D: missing return statement at end of non-void function "default_hardware"
+src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
+src\Main.c - 1 Error(s), 10 Warning(s).
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+.\inc\data.h(14): warning:  #1-D: last line of file ends without a newline
+src\Main.c(192): warning:  #1295-D: Deprecated declaration read - give arg types
+src\Main.c(391): warning:  #940-D: missing return statement at end of non-void function "myinit"
+src\Main.c(415): error:  #29: expected an expression
+src\Main.c(415): error:  #29: expected an expression
+src\Main.c(425): warning:  #940-D: missing return statement at end of non-void function "default_hardware"
+src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
+src\Main.c - 2 Error(s), 9 Warning(s).
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+.\inc\data.h(14): warning:  #1-D: last line of file ends without a newline
+src\Main.c(192): warning:  #1295-D: Deprecated declaration read - give arg types
+src\Main.c(391): warning:  #940-D: missing return statement at end of non-void function "myinit"
+src\Main.c(426): warning:  #940-D: missing return statement at end of non-void function "default_hardware"
+src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
+src\Main.c - 0 Error(s), 9 Warning(s).
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+.\inc\data.h(25): warning:  #1-D: last line of file ends without a newline
+src\Main.c(391): warning:  #940-D: missing return statement at end of non-void function "myinit"
+src\Main.c(426): warning:  #940-D: missing return statement at end of non-void function "default_hardware"
+src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
+src\Main.c - 0 Error(s), 8 Warning(s).
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+.\inc\data.h(25): warning:  #1-D: last line of file ends without a newline
+src\Main.c(390): warning:  #177-D: label "fail" was declared but never referenced
+src\Main.c(427): warning:  #177-D: label "fail" was declared but never referenced
+src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
+src\Main.c - 0 Error(s), 8 Warning(s).
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Main.c(390): warning:  #177-D: label "fail" was declared but never referenced
+src\Main.c(427): warning:  #177-D: label "fail" was declared but never referenced
+src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
+src\Main.c - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling nand.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\nand.c(36): warning:  #550-D: variable "pMID" was set but never used
+src\nand.c(38): warning:  #550-D: variable "nBuff" was set but never used
+src\nand.c(39): warning:  #550-D: variable "n4thcycle" was set but never used
+compiling 2440lib.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling Adc.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling keyscan.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling LCD_TFT.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling memtest.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling mmu.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling profile.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\profile.c(36): warning:  #177-D: variable "divider" was declared but never referenced
+compiling RTC.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling SD_MMC.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling Touchpanel.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(152): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(155): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(175): warning:  #61-D: integer operation result is out of range
+linking...
+Program Size: Code=21404 RO-data=24180 RW-data=768112 ZI-data=768124  
+FromELF: creating hex file...
+User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
+"TQ2440.axf" - 0 Error(s), 56 Warning(s).
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Main.c(390): warning:  #223-D: function "default_values" declared implicitly
+src\Main.c(391): warning:  #223-D: function "default_hardware" declared implicitly
+src\Main.c(398): error:  #159: declaration is incompatible with previous "default_values" (declared at line 390)
+src\Main.c(425): error:  #159: declaration is incompatible with previous "default_hardware" (declared at line 391)
+src\Main.c(431): warning:  #177-D: label "fail" was declared but never referenced
+src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
+src\Main.c - 2 Error(s), 8 Warning(s).
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Main.c(434): warning:  #177-D: label "fail" was declared but never referenced
+src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
+src\Main.c - 0 Error(s), 6 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=21444 RO-data=24180 RW-data=768112 ZI-data=768124  
+FromELF: creating hex file...
+User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
+"TQ2440.axf" - 0 Error(s), 0 Warning(s).
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Main.c(436): warning:  #177-D: label "fail" was declared but never referenced
+src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
+src\Main.c - 0 Error(s), 6 Warning(s).

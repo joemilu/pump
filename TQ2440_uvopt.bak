@@ -25,7 +25,7 @@
     <ToolsetNumber>0x4</ToolsetNumber>
     <ToolsetName>ARM-ADS</ToolsetName>
     <TargetOption>
-      <CLKADS>12000000</CLKADS>
+      <CLKADS>50000000</CLKADS>
       <OPTTT>
         <gFlags>1</gFlags>
         <BeepAtEnd>1</BeepAtEnd>
@@ -94,8 +94,8 @@
         <TargetDlgDllArguments>-pS3C2440A</TargetDlgDllArguments>
       </DllOpt>
       <DebugOpt>
-        <uSim>0</uSim>
-        <uTrg>1</uTrg>
+        <uSim>1</uSim>
+        <uTrg>0</uTrg>
         <sLdApp>1</sLdApp>
         <sGomain>1</sGomain>
         <sRbreak>1</sRbreak>
@@ -112,7 +112,7 @@
         <tRbox>1</tRbox>
         <sRunDeb>0</sRunDeb>
         <sLrtime>0</sLrtime>
-        <nTsel>6</nTsel>
+        <nTsel>2</nTsel>
         <sDll></sDll>
         <sDllPa></sDllPa>
         <sDlgDll></sDlgDll>
@@ -128,6 +128,11 @@
       <TargetDriverDllRegistry>
         <SetRegEntry>
           <Number>0</Number>
+          <Key>DLGDARM</Key>
+          <Name>(113=-1,-1,-1,-1,0)(100=-1,-1,-1,-1,0)(102=-1,-1,-1,-1,0)(103=-1,-1,-1,-1,0)(104=-1,-1,-1,-1,0)(105=-1,-1,-1,-1,0)(106=-1,-1,-1,-1,0)(107=-1,-1,-1,-1,0)(108=-1,-1,-1,-1,0)(109=-1,-1,-1,-1,0)(110=-1,-1,-1,-1,0)(111=-1,-1,-1,-1,0)(112=-1,-1,-1,-1,0)</Name>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
           <Key>JLTDLG</Key>
           <Name></Name>
         </SetRegEntry>
@@ -139,7 +144,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>ARMDBGFLAGS</Key>
-          <Name></Name>
+          <Name>-T5F</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -194,10 +199,10 @@
       <FileType>2</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>20</ColumnNumber>
+      <ColumnNumber>44</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>92</TopLine>
-      <CurrentLine>117</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>1</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\src\2440init.s</PathWithFileName>
       <FilenameWithoutPath>2440init.s</FilenameWithoutPath>
@@ -210,8 +215,8 @@
       <Focus>0</Focus>
       <ColumnNumber>41</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>19</TopLine>
-      <CurrentLine>19</CurrentLine>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\src\2440slib.s</PathWithFileName>
       <FilenameWithoutPath>2440slib.s</FilenameWithoutPath>
@@ -236,10 +241,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>66</ColumnNumber>
+      <ColumnNumber>72</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>321</TopLine>
-      <CurrentLine>330</CurrentLine>
+      <TopLine>611</TopLine>
+      <CurrentLine>643</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\src\2440lib.c</PathWithFileName>
       <FilenameWithoutPath>2440lib.c</FilenameWithoutPath>
@@ -260,7 +265,7 @@
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
-      <FileNumber>8</FileNumber>
+      <FileNumber>6</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -274,35 +279,35 @@
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
-      <FileNumber>9</FileNumber>
+      <FileNumber>7</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>5</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>308</TopLine>
+      <CurrentLine>338</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\src\LCD_TFT.c</PathWithFileName>
       <FilenameWithoutPath>LCD_TFT.c</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
-      <FileNumber>10</FileNumber>
+      <FileNumber>8</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>38</ColumnNumber>
+      <ColumnNumber>6</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>115</TopLine>
-      <CurrentLine>140</CurrentLine>
+      <TopLine>170</TopLine>
+      <CurrentLine>170</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\src\Main.c</PathWithFileName>
       <FilenameWithoutPath>Main.c</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
-      <FileNumber>11</FileNumber>
+      <FileNumber>9</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -316,7 +321,7 @@
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
-      <FileNumber>12</FileNumber>
+      <FileNumber>10</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -330,7 +335,7 @@
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
-      <FileNumber>13</FileNumber>
+      <FileNumber>11</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -344,7 +349,7 @@
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
-      <FileNumber>14</FileNumber>
+      <FileNumber>12</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -358,7 +363,7 @@
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
-      <FileNumber>15</FileNumber>
+      <FileNumber>13</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -372,7 +377,7 @@
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
-      <FileNumber>16</FileNumber>
+      <FileNumber>14</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -386,28 +391,28 @@
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
-      <FileNumber>17</FileNumber>
+      <FileNumber>15</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
       <ColumnNumber>111</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>110</TopLine>
-      <CurrentLine>129</CurrentLine>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\src\Touchpanel.c</PathWithFileName>
       <FilenameWithoutPath>Touchpanel.c</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
-      <FileNumber>18</FileNumber>
+      <FileNumber>16</FileNumber>
       <FileType>1</FileType>
-      <tvExp>0</tvExp>
+      <tvExp>1</tvExp>
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>1</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\src\TQ_LOGO.c</PathWithFileName>
       <FilenameWithoutPath>TQ_LOGO.c</FilenameWithoutPath>
@@ -416,26 +421,26 @@
 
   <Group>
     <GroupName>inc</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <File>
       <GroupNumber>2</GroupNumber>
-      <FileNumber>19</FileNumber>
+      <FileNumber>17</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>663</TopLine>
+      <CurrentLine>685</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\inc\2440addr.h</PathWithFileName>
       <FilenameWithoutPath>2440addr.h</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>2</GroupNumber>
-      <FileNumber>20</FileNumber>
+      <FileNumber>18</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -449,21 +454,21 @@
     </File>
     <File>
       <GroupNumber>2</GroupNumber>
-      <FileNumber>21</FileNumber>
+      <FileNumber>19</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>49</TopLine>
+      <CurrentLine>64</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\inc\2440slib.h</PathWithFileName>
       <FilenameWithoutPath>2440slib.h</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>2</GroupNumber>
-      <FileNumber>22</FileNumber>
+      <FileNumber>20</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -477,7 +482,7 @@
     </File>
     <File>
       <GroupNumber>2</GroupNumber>
-      <FileNumber>24</FileNumber>
+      <FileNumber>21</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -491,21 +496,21 @@
     </File>
     <File>
       <GroupNumber>2</GroupNumber>
-      <FileNumber>29</FileNumber>
+      <FileNumber>22</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>99</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>60</TopLine>
+      <CurrentLine>74</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\inc\def.h</PathWithFileName>
       <FilenameWithoutPath>def.h</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>2</GroupNumber>
-      <FileNumber>32</FileNumber>
+      <FileNumber>23</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -519,7 +524,7 @@
     </File>
     <File>
       <GroupNumber>2</GroupNumber>
-      <FileNumber>33</FileNumber>
+      <FileNumber>24</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -533,7 +538,7 @@
     </File>
     <File>
       <GroupNumber>2</GroupNumber>
-      <FileNumber>34</FileNumber>
+      <FileNumber>25</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -547,7 +552,7 @@
     </File>
     <File>
       <GroupNumber>2</GroupNumber>
-      <FileNumber>35</FileNumber>
+      <FileNumber>26</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -561,7 +566,7 @@
     </File>
     <File>
       <GroupNumber>2</GroupNumber>
-      <FileNumber>36</FileNumber>
+      <FileNumber>27</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -575,7 +580,7 @@
     </File>
     <File>
       <GroupNumber>2</GroupNumber>
-      <FileNumber>37</FileNumber>
+      <FileNumber>28</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -589,7 +594,7 @@
     </File>
     <File>
       <GroupNumber>2</GroupNumber>
-      <FileNumber>38</FileNumber>
+      <FileNumber>29</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -603,7 +608,7 @@
     </File>
     <File>
       <GroupNumber>2</GroupNumber>
-      <FileNumber>39</FileNumber>
+      <FileNumber>30</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -617,7 +622,7 @@
     </File>
     <File>
       <GroupNumber>2</GroupNumber>
-      <FileNumber>40</FileNumber>
+      <FileNumber>31</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -631,7 +636,7 @@
     </File>
     <File>
       <GroupNumber>2</GroupNumber>
-      <FileNumber>41</FileNumber>
+      <FileNumber>32</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -643,6 +648,34 @@
       <PathWithFileName>.\inc\SD_MMC.h</PathWithFileName>
       <FilenameWithoutPath>SD_MMC.h</FilenameWithoutPath>
     </File>
+    <File>
+      <GroupNumber>2</GroupNumber>
+      <FileNumber>0</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>0</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>1</TopLine>
+      <CurrentLine>1</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\inc\global.h</PathWithFileName>
+      <FilenameWithoutPath>global.h</FilenameWithoutPath>
+    </File>
+    <File>
+      <GroupNumber>2</GroupNumber>
+      <FileNumber>0</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>0</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\inc\data.h</PathWithFileName>
+      <FilenameWithoutPath>data.h</FilenameWithoutPath>
+    </File>
   </Group>
 
   <MDIGroups>
@@ -650,25 +683,49 @@
     <ActiveMDIGroup>0</ActiveMDIGroup>
     <MDIGroup>
       <Size>100</Size>
-      <ActiveTab>2</ActiveTab>
+      <ActiveTab>0</ActiveTab>
       <Documents>
         <Doc>
-          <Name>.\src\Touchpanel.c</Name>
-          <ColumnNumber>111</ColumnNumber>
-          <TopLine>110</TopLine>
-          <CurrentLine>129</CurrentLine>
+          <Name>.\src\Main.c</Name>
+          <ColumnNumber>11</ColumnNumber>
+          <TopLine>327</TopLine>
+          <CurrentLine>327</CurrentLine>
         </Doc>
         <Doc>
-          <Name>.\src\Main.c</Name>
-          <ColumnNumber>38</ColumnNumber>
-          <TopLine>115</TopLine>
-          <CurrentLine>140</CurrentLine>
+          <Name>.\inc\2440addr.h</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>663</TopLine>
+          <CurrentLine>677</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\inc\def.h</Name>
+          <ColumnNumber>14</ColumnNumber>
+          <TopLine>55</TopLine>
+          <CurrentLine>87</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\inc\global.h</Name>
+          <ColumnNumber>27</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>7</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\inc\data.h</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>26</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\src\2440lib.c</Name>
-          <ColumnNumber>66</ColumnNumber>
-          <TopLine>321</TopLine>
-          <CurrentLine>330</CurrentLine>
+          <ColumnNumber>5</ColumnNumber>
+          <TopLine>205</TopLine>
+          <CurrentLine>205</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\inc\LCD_TFT.h</Name>
+          <ColumnNumber>154</ColumnNumber>
+          <TopLine>226</TopLine>
+          <CurrentLine>233</CurrentLine>
         </Doc>
       </Documents>
     </MDIGroup>

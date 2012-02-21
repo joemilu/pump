@@ -53,7 +53,7 @@
           <ListingPath>.\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
-          <CreateBatchFile>0</CreateBatchFile>
+          <CreateBatchFile>1</CreateBatchFile>
           <BeforeCompile>
             <RunUserProg1>0</RunUserProg1>
             <RunUserProg2>0</RunUserProg2>
@@ -412,16 +412,6 @@
               <FilePath>.\src\Adc.c</FilePath>
             </File>
             <File>
-              <FileName>dma.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\dma.c</FilePath>
-            </File>
-            <File>
-              <FileName>eeprom.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\eeprom.c</FilePath>
-            </File>
-            <File>
               <FileName>keyscan.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src\keyscan.c</FilePath>
@@ -502,49 +492,14 @@
               <FilePath>.\inc\2440usb.h</FilePath>
             </File>
             <File>
-              <FileName>AudioDrv.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\inc\AudioDrv.h</FilePath>
-            </File>
-            <File>
               <FileName>bootpara.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\inc\bootpara.h</FilePath>
             </File>
             <File>
-              <FileName>camdata.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\inc\camdata.h</FilePath>
-            </File>
-            <File>
-              <FileName>camdef.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\inc\camdef.h</FilePath>
-            </File>
-            <File>
-              <FileName>camif.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\inc\camif.h</FilePath>
-            </File>
-            <File>
-              <FileName>camproset.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\inc\camproset.h</FilePath>
-            </File>
-            <File>
               <FileName>def.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\inc\def.h</FilePath>
-            </File>
-            <File>
-              <FileName>dma.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\inc\dma.h</FilePath>
-            </File>
-            <File>
-              <FileName>IIC.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\inc\IIC.h</FilePath>
             </File>
             <File>
               <FileName>keyscan.h</FileName>
@@ -595,16 +550,6 @@
               <FileName>SD_MMC.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\inc\SD_MMC.h</FilePath>
-            </File>
-            <File>
-              <FileName>Test_OV9650.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\inc\Test_OV9650.h</FilePath>
-            </File>
-            <File>
-              <FileName>Wav_source.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\inc\Wav_source.h</FilePath>
             </File>
           </Files>
         </Group>

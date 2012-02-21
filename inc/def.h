@@ -70,5 +70,28 @@ typedef void *PVOID;
 #define END_KEY		0x4b
 #define	ESC_KEY		0x1b
 
+#define uint unsigned int
+#define uchar unsigned char
+#define SUCCESS 1
+#define FAIL 0
+
+#define DEFAULT_CR 1
+#define DEFAULT_VO 5500
+#define DEFAULT_HB 60
+#define B_ON 1
+#define B_OFF 0
+
+#define YULIANG 5.0f
+#define YULIANG_1 3.0f
+#define HCLOSED 1
+#define BOTTOM 0
+#define TOP 2
+
+#define SAMPLE_RATE	200	//采样率 200HZ
+#define INI_SAMPLE_PERIOD SAMPLE_RATE*20	//初始化采用时间
+#define BUFFER_SZ	200	//缓存区大小
+#define FILTER_SZ_1	3//滤波长度
+#define FILTER_SZ	5//滤波长度			
+
 #endif /*__DEF_H__*/
 
