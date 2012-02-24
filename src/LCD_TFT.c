@@ -12,6 +12,11 @@ The initial and control for 16Bpp TFT LCD
 
 #define M5D(n)				((n) & 0x1fffff)	// To get lower 21bits
 
+extern unsigned char __CHS[];
+extern unsigned char __VGA[];
+extern unsigned char   YSW[];
+extern unsigned char   NUMS[];
+
 extern void Uart_Printf(char *f, ...) ;
 
 volatile unsigned short LCD_BUFFER[SCR_YSIZE_TFT][SCR_XSIZE_TFT];
@@ -441,4 +446,62 @@ void Lcd_TFT_Test( void )
 	Uart_Getch();	
         
 }
+
+/******************向LCD输出48*24数字***********************************/
+
+void OUT_NUM(unsigned int x,unsigned int y,unsigned long Num,unsigned int c,unsigned int bk_c,unsigned int st)
+{
+	unsigned  long  pow=1;        
+  	unsigned long  temp;
+  	unsigned char Weishu=0;
+	unsigned char *pZK,mask,buf;
+	unsigned short int i,j,k;
+  
+  	pZK = &NUMS[0];
+   	temp=Num;
+   	while(temp!=0)				//计算该数值的位数
+    {
+    	temp=temp/10;
+        Weishu++;          
+    }
+   	for(;Weishu>1;Weishu--)
+   	pow=pow*10;					//得到最高位数对应的整值，如2位数得10、3位数得100依此类推
+   	while(pow!=0)
+    {
+        Weishu=Num/pow;			//通过整除运算依次得到对应位的数字
+        /**********单个数字输出**********/
+        
+        for( i = 0 ; i < 48 ; i++ )
+       	{
+       		for( k=0;k<=2;k++ )					//每次输出一行，由于为48*24的点阵故一行占用三个字节,分三次输出
+            {									//k等于1时即为第二个字节的输出、k等于2时为第三个字节输出
+            	mask = 0x80;
+              	buf = pZK[i*3+k+Weishu*144];		//找到该位上数字的点阵码地置
+              	for( j = 0 ; j < 8 ; j++ )		//数字库按照0~9的顺序依次排列，每个数字按横向取模占用48*24/8＝144个字节
+              	{
+                   
+                    if( buf & mask )
+                     {
+                            PutPixel(x+j+8*k,y+i,c);	//第二、三个字节的点阵时输出坐标应该依次向右移8
+                     }
+                     else
+                     {
+                            if( !st )
+                            {
+                                   PutPixel(x+j+8*k,y+i,bk_c);
+                            }
+                     }
+                     mask = mask >> 1;
+              	} 
+            }	
+       	}
+        
+        Num=Num%pow;			//在获得高位的数字并输出之后，通过取余运算依次剔除高位
+        pow=pow/10;				
+        x +=24;					//在向LCD写完一位上的数字之后坐标应右移24(字体为48*24即宽度为24)以输出下一位上的数字
+    } 
+}
+
+
 //*************************************************************
+

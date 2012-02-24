@@ -17,15 +17,16 @@
 ### List of Objects: adding '"sd_mmc.o"'
 ### List of Objects: adding '"touchpanel.o"'
 ### List of Objects: adding '"tq_logo.o"'
+### List of Objects: adding '"font_libs.o"'
 ### ADS-LD Command completed:
---cpu ARM920T "2440init.o" "2440slib.o" "nand.o" "2440lib.o" "adc.o" "keyscan.o" "lcd_tft.o" "main.o" "memtest.o" "mmu.o" "pic.o" "profile.o" "rtc.o" "sd_mmc.o" "touchpanel.o" "tq_logo.o" --strict --scatter ".\config\RunInSDRAM.sct" 
+--cpu ARM920T "2440init.o" "2440slib.o" "nand.o" "2440lib.o" "adc.o" "keyscan.o" "lcd_tft.o" "main.o" "memtest.o" "mmu.o" "pic.o" "profile.o" "rtc.o" "sd_mmc.o" "touchpanel.o" "tq_logo.o" "font_libs.o" --strict --scatter ".\config\RunInSDRAM.sct" 
 --autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
 --info sizes --info totals --info unused --info veneers 
  --list ".\TQ2440.map" -o "TQ2440.axf"### Preparing Environment (PrepEnvAds)
 ### ADS-LD Output File: 'TQ2440.axf'
 ### ADS-LD Command File: 'TQ2440.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile 'TQ2440.lnp', Handle=0x00000578
+### Creating CmdFile 'TQ2440.lnp', Handle=0x00000558
 ### Writing '.lnp' file
 ### ADS-LD Command file 'TQ2440.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.

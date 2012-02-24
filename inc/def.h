@@ -25,6 +25,8 @@ typedef BYTE *LPBYTE;
 
 typedef void *PVOID;
 
+
+
 #define	BYTE	char
 #define	WORD 	short
 #define	DWORD	int
@@ -91,7 +93,73 @@ typedef void *PVOID;
 #define INI_SAMPLE_PERIOD SAMPLE_RATE*20	//初始化采用时间
 #define BUFFER_SZ	200	//缓存区大小
 #define FILTER_SZ_1	3//滤波长度
-#define FILTER_SZ	5//滤波长度			
+#define FILTER_SZ	5//滤波长度	
+
+
+struct SYSTEM_STAT{
+	uint  interface;			//所处界面
+	uint refresh;
+};
+
+struct THERAPY_CONFIG{
+	float compress_ratio; 	//压缩比
+	double volume;		    //压缩总量
+	uint heart_beat;		
+};
+
+struct TOUCH_STAT{
+	uint xpoint,ypoint;		//屏幕位置
+	uint xdata,ydata;  		//ts采样值
+};
+
+//按钮状态
+struct BUTTOMS{
+	uint start;		//开始工作
+	uint stop; 		//结束工作
+	uint set;
+	uint pressure;
+	uint back;
+	uint p1000;
+	uint m1000;
+	uint p100;
+	uint m100;
+	uint p10;
+	uint m10;
+	uint p1;
+	uint m1;
+	uint p01;
+	uint m01;
+};
+
+struct DATA_STAT{
+	uint index;
+};
+
+struct AD_STAT{
+	uint ad_raw;
+};
+
+struct HEAT_STAT{
+	uint Max;//最大值
+	uint Period;//周期
+	uint Min;//最小值
+	uint RelaxPeriod;//舒缓期长度
+	uint Ave; //平均值
+//	uint useful;//数据是够有效
+	uint updown;//0->上升期 1->下降期
+	uint ClosePoint;
+	float delt[2];	 //delta值，[0]上一次的值，[1]现值
+	uint rate;	//心率
+};
+
+struct PUMP_STAT{
+	uint direction;
+	uint step;
+	uint pwm_rate;
+	uint stat;
+	uint pos;
+};
+		
 
 #endif /*__DEF_H__*/
 

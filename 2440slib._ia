@@ -1,0 +1,1 @@
+--cpu ARM920T -g --apcs=interwork -I.\inc -I "C:\Keil\ARM\INC" -I "C:\Keil\ARM\INC\Samsung" --list ".\2440slib.lst" --xref -o "2440slib.o" --depend "2440slib.d" "src\2440slib.s"

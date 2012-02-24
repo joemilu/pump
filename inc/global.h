@@ -1,15 +1,17 @@
-extern 	SYSTEM_STAT sys_stat;
-extern	THERAPY_CONFIG theo_conf;
-extern	TOUCH_STAT touch_stat;
-extern	BUTTOMS buttoms;
-extern	DATA_STAT rawdata;
-extern	AD_STAT ad_stat;
-extern	HEAT_STAT heart_stat;
-extern	PUMP_STAT pump_stat;
+#include "def.h"
+
+extern 	struct SYSTEM_STAT sys_stat;
+extern	struct THERAPY_CONFIG theo_conf;
+extern	struct TOUCH_STAT touch_stat;
+extern	struct BUTTOMS buttoms;
+extern	struct DATA_STAT rawdata;
+extern	struct AD_STAT ad_stat;
+extern	struct HEAT_STAT heart_stat;
+extern	struct PUMP_STAT pump_stat;
 
 /*
 struct SYSTEM_STAT{
-	uint  interface;			//所处界面  0.主界面 1.工作界面
+	uint  interface;			//所处界面  0.主界面 1.压力 2.参数设定
 	uint refresh;
 };
 
@@ -28,6 +30,8 @@ struct TOUCH_STAT{
 struct BUTTOMS{
 	uint start;		//开始工作
 	uint stop; 		//结束工作
+	uint set;
+	uint pressure;
 };
 
 struct DATA_STAT{

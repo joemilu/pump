@@ -43,7 +43,7 @@ extern void Test_Adc(void) ;
 extern void KeyScan_Test(void) ;
 extern void RTC_Display(void) ;
 extern void Test_SDI(void) ;
-;
+
 
 volatile U32 downloadAddress;
 
@@ -68,67 +68,7 @@ static U32 cpu_freq;
 static U32 UPLL;
 
 
-struct SYSTEM_STAT{
-	uint  interface;			//所处界面
-	uint refresh;
-};
 
-struct THERAPY_CONFIG{
-	float compress_ratio; 	//压缩比
-	double volume;		    //压缩总量
-	uint heart_beat;		
-};
-
-struct TOUCH_STAT{
-	uint xpoint,ypoint;		//屏幕位置
-	uint xdata,ydata;  		//ts采样值
-};
-
-//按钮状态
-struct BUTTOMS{
-	uint start;		//开始工作
-	uint stop; 		//结束工作
-};
-
-struct DATA_STAT{
-	uint index;
-};
-
-struct AD_STAT{
-	uint ad_raw;
-};
-
-struct HEAT_STAT{
-	uint Max;//最大值
-	uint Period;//周期
-	uint Min;//最小值
-	uint RelaxPeriod;//舒缓期长度
-	uint Ave; //平均值
-//	uint useful;//数据是够有效
-	uint updown;//0->上升期 1->下降期
-	uint ClosePoint;
-	float delt[2];	 //delta值，[0]上一次的值，[1]现值
-	uint rate;	//心率
-};
-
-struct PUMP_STAT{
-	uint direction;
-	uint step;
-	uint pwm_rate;
-	uint stat;
-	uint pos;
-};
-
-
-struct	SYSTEM_STAT sys_stat;
-struct	THERAPY_CONFIG theo_conf;
-struct	TOUCH_STAT touch_stat;
-struct	BUTTOMS buttoms;
-struct	DATA_STAT rawdata;
-struct	DATA_STAT filtereddata;
-struct	AD_STAT ad_stat;
-struct	HEAT_STAT heart_stat;
-struct	PUMP_STAT pump_stat;
 
 
 static void cal_cpu_bus_clk(void)
@@ -193,10 +133,30 @@ uint read(void);
 void default_values(void);
 uint default_hardware(void);
 
+uint myinit(void);
+void callback_bt_start(void);
+void load_interface(int n);
+
 void __irq Timer0_ISR(void);
 void __irq Timer2_ISR(void);
+extern void __irq AdcTsAuto(void);
+void starttimer0(void);
+void starttimer1(void);
+void starttimer2(void);
 
+struct	SYSTEM_STAT sys_stat;
+struct	THERAPY_CONFIG theo_conf;
+struct	TOUCH_STAT touch_stat;
+struct	BUTTOMS buttoms;
+struct	DATA_STAT rawdata;
+struct	DATA_STAT filtereddata;
+struct	AD_STAT ad_stat;
+struct	HEAT_STAT heart_stat;
+struct	PUMP_STAT pump_stat;
 
+extern unsigned char TQ_LOGO_800480[];
+extern unsigned char Presspic[];
+extern unsigned char Setpic[];
 
 void Main(void)
 {
@@ -244,15 +204,10 @@ void Main(void)
 	
 
 	
+	
 	Beep(2000, 100);
 	
-	Uart_SendByte('\n');
-	Uart_Printf("<***************************************>\n");
-	Uart_Printf("               LVAD SYSTEM BETA!\n");
-	Uart_Printf("                SJTU BME !\n");
-	Uart_Printf("                Edit in MDK4.12,by:joe!\n");
-//	Uart_Printf("      Build time is: %s  %s\n", __DATE__ , __TIME__  );
-	Uart_Printf("<***************************************>\n");
+
 
 	rMISCCR=rMISCCR&~(1<<3); // USBD is selected instead of USBH1 
 	rMISCCR=rMISCCR&~(1<<13); // USB port 1 is enabled.
@@ -274,16 +229,64 @@ void Main(void)
 	Clk0_Disable();
 	Clk1_Disable();
 	
-	mpll_val = rMPLLCON;
+	mpll_val = rMPLLCON;						
 
 
-	
+
 	pISR_FIQ = (int)Timer2_ISR;
 	pISR_TIMER0 = (int)Timer0_ISR;
 
+ 	myinit();
+
+//	Lcd_TFT_Test();
+
 	while(1)
 	{
-
+		if(sys_stat.refresh)
+		{
+//			load_interface(sys_stat.interface);
+			switch(sys_stat.interface)
+			{
+				case 0:	{
+							if(buttoms.start)
+							{
+								buttoms.start = B_OFF;
+								starttimer0();
+							}else if(buttoms.stop)
+							{}else if(buttoms.set)
+							{
+								buttoms.set = B_OFF; 
+								sys_stat.interface = 2;
+								load_interface(sys_stat.interface);	
+							}else if(buttoms.pressure)
+							{
+								buttoms.set = B_OFF; 
+								sys_stat.interface = 1;
+								load_interface(sys_stat.interface);								
+							}
+						}
+						break;
+				case 1:	{
+							if(buttoms.back)
+							{
+								buttoms.back = B_OFF;
+								sys_stat.interface = 0;
+								load_interface(sys_stat.interface);										
+							}							
+						}
+						break;
+				case 2:	{
+							if(buttoms.back)
+							{
+								buttoms.back = B_OFF;
+								sys_stat.interface = 0;
+								load_interface(sys_stat.interface);										
+							}
+						}
+						break;
+				 default:break;
+			}	
+		}
 	}	  	
 
 }
@@ -364,7 +367,7 @@ void Clk1_Disable(void)
 
 void __irq Timer0_ISR(void) 
 {
-
+	read();
 }
 
 void __irq Timer2_ISR(void)
@@ -391,6 +394,7 @@ uint myinit()
 	default_values();
 	if(!default_hardware())
 		goto fail;
+	load_interface(sys_stat.interface);
 	return SUCCESS;
 fail:
 	return FAIL;
@@ -409,6 +413,19 @@ void default_values()
 	touch_stat.ydata = 0; 
 	buttoms.start = B_OFF;
 	buttoms.stop = B_OFF;
+	buttoms.set = B_OFF;
+	buttoms.pressure = B_OFF;
+	buttoms.back = B_OFF;
+	buttoms.p1000 = B_OFF;
+	buttoms.m1000 = B_OFF;
+	buttoms.p100 = B_OFF;
+	buttoms.m100 = B_OFF;
+	buttoms.p10 = B_OFF;
+	buttoms.m10 = B_OFF;
+	buttoms.p1 = B_OFF;
+	buttoms.m1 = B_OFF;
+	buttoms.p01 = B_OFF;
+	buttoms.m01 = B_OFF;
 	rawdata.index = 0;
 	ad_stat.ad_raw = 0;
 	heart_stat.Max = 0;//最大值
@@ -429,14 +446,66 @@ uint default_hardware()
 //timer	  
 //LCD
 	Lcd_TFT_Init() ;		// LCD initial
-
-//ad/touch
 //uart
 	consoleNum = 0;	// Uart 1 select for debug.
 	Uart_Init( 0,115200 );
 	Uart_Select( consoleNum );
+	Uart_SendByte('\n');
+	Uart_Printf("<***************************************>\n");
+	Uart_Printf("               LVAD SYSTEM BETA!\n");
+	Uart_Printf("                SJTU BME !\n");
+	Uart_Printf("                Edit in MDK4.12,by:joe!\n");
+//	Uart_Printf("      Build time is: %s  %s\n", __DATE__ , __TIME__  );
+	Uart_Printf("<***************************************>\n");
 //中断
+//ad/touch
+	rADCDLY=50000;  //设定ADC开始延迟寄存器的值，使得延迟为:(1/3.6864M)*50000=13.56ms
+	rADCCON=(1<<14)|(9<<6);   //rADCCON[14]=1，AD转换预分频器有效，rADCCON[13:6]=9,ADC频率=PCLK/10=5M
+
+	Uart_Printf("\n触摸屏测试开始，请点击触摸屏!\n");
+
+	rADCTSC=(1<<7)|(1<<6)|(0<<5)|(1<<4)|(3);  //？？？
+
+	pISR_ADC = (int)AdcTsAuto;//中断函数注册
+	
+	rINTMSK=~BIT_ADC;//使能ADC中断
+	rINTSUBMSK=~(BIT_SUB_TC);//使能触摸点击子中断
 	return SUCCESS;
 fail:
 	return FAIL;
 } 
+
+void load_interface(int n)
+{
+	switch(n)
+	{
+		case 0:	Paint_Bmp(0, 0, 800, 480, TQ_LOGO_800480);
+				break;
+		case 1:	Paint_Bmp(0, 0, 800, 480, Presspic);
+				break;
+		case 2: Paint_Bmp(0, 0, 800, 480, Setpic);
+				break;
+		default:break;
+	}
+}
+
+void starttimer0()
+{
+	rTCFG0 = 0x00000001;		//prescaler = 1+1
+	rTCFG1 &= ~(0xf);
+	rTCFG1 |= 3;				//mux = 1/16
+	rTCNTB0 = 7812;			//分频数为2*16=32  50000000/32=62500*25  7812 1/200 10416 1/150 15625 1/100	  3960 1/400
+	rTCMPB0 =0;	
+	ClearPending(BIT_TIMER0);
+	rTCON &= ~0x00F01F;	//
+	rTCON |= 0x00700b; //
+	rTCON &= ~0x002002;
+//	Uart_Printf("\nPCLK = %ld\n",PCLK);
+	EnableIrq(BIT_TIMER0);
+}
+
+void starttimer1()
+{}
+
+void starttimer2()
+{}

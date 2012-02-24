@@ -5,7 +5,7 @@
 #include "def.h"
 #include "2440addr.h"
 #include "2440lib.h"
-
+#include "global.h"
 
 #define REQCNT 30
 #define ADCPRS 9
@@ -122,7 +122,7 @@ void Test_Touchpanel(void)//触摸屏测试
 void __irq AdcTsAuto(void)
 {
 	U32 saveAdcdly;
-
+	int Xpoint,Ypoint;
 	if(rADCDAT0&0x8000)//判断光标状态ADCDAT0[15]，0：按下，1提起
 	{//若光标提起
 		Uart_SendString("\n光标已经提起!!\n");//打印光标提起信息
@@ -143,8 +143,10 @@ void __irq AdcTsAuto(void)
 		
 	while(!(rSRCPND & (BIT_ADC)));//检测ADC转换结束中断是否发生，如果没有发生则继续等待，如果发生则输出ADC量化值
 
-	xdata=(rADCDAT0&0x3ff);//转换完成，输出转换的量化值
- 	ydata=(rADCDAT1&0x3ff);
+	ydata=(rADCDAT0&0x3ff);
+ 	xdata=(rADCDAT1&0x3ff);
+ 	Xpoint=0.89*xdata-55;           //x、y坐标由AD值转换为对应象素值
+ 	Ypoint=0.6*ydata-68;
 
 	rSUBSRCPND|=BIT_SUB_TC;
 	//手动修改子中断源登记寄存器rSUBSRCPND[9]=1，表示触摸屏按键光标中断源已经申请中断且在等待中断服务，使用软件方法使触摸屏按下中断发生
@@ -166,7 +168,96 @@ void __irq AdcTsAuto(void)
 		}
 	}	
 
-	Uart_Printf("count=%03d  XP=%04d, YP=%04d\n", count++, xdata, ydata);    //X-position Conversion data            
+	Uart_Printf("count=%03d  XP=%04d, YP=%04d\n", count++, Xpoint, Ypoint);    //X-position Conversion data   
+
+
+	switch(sys_stat.interface)
+	{
+		case 0:	{
+					if(Xpoint>=50&&Xpoint<=200&&Ypoint>=265&&Ypoint<=415)
+					{
+						 sys_stat.refresh = 1;
+						 buttoms.start = B_ON;
+					}else if(Xpoint>=416&&Xpoint<=566&&Ypoint>=265&&Ypoint<=415)
+					{
+						 sys_stat.refresh = 1;
+						 buttoms.stop = B_ON;						 
+					}else if(Xpoint>=233&&Xpoint<=383&&Ypoint>=265&&Ypoint<=415)
+					{
+						 sys_stat.refresh = 1;
+						 buttoms.set = B_ON;						
+					}else if(Xpoint>=600&&Xpoint<=750&&Ypoint>=265&&Ypoint<=415)
+					{
+						 sys_stat.refresh = 1;
+						 buttoms.pressure = B_ON;						
+					}
+				}
+				break;
+		case 1:	{
+					if(Xpoint>=100&&Xpoint<=170&&Ypoint>=280&&Ypoint<=350)        //压缩量+1000
+				  	{
+						 sys_stat.refresh = 1;
+						 buttoms.p1000 = B_ON;														 
+					}	
+					if(Xpoint>=180&&Xpoint<=250&&Ypoint>=280&&Ypoint<=350)        //压缩量-1000
+					{
+						 sys_stat.refresh = 1;
+						 buttoms.m1000 = B_ON;					
+					}	
+					if(Xpoint>=100&&Xpoint<=170&&Ypoint>=370&&Ypoint<=440)        //压缩量+100
+					{
+						 sys_stat.refresh = 1;
+						 buttoms.p100 = B_ON;					
+					}				
+					if(Xpoint>=180&&Xpoint<=250&&Ypoint>=370&&Ypoint<=440)        //压缩量-100
+					{
+						 sys_stat.refresh = 1;
+						 buttoms.m100 = B_ON;					
+					}			
+					if(Xpoint>=310&&Xpoint<=380&&Ypoint>=280&&Ypoint<=350)        //心率+10
+					{
+						 sys_stat.refresh = 1;
+						 buttoms.p10 = B_ON;					
+					}
+					if(Xpoint>=390&&Xpoint<=460&&Ypoint>=280&&Ypoint<=350)        //心率-10
+					{
+						 sys_stat.refresh = 1;
+						 buttoms.m10 = B_ON;					
+					}
+					if(Xpoint>=310&&Xpoint<=380&&Ypoint>=370&&Ypoint<=440)        //心率+1
+					{
+						 sys_stat.refresh = 1;
+						 buttoms.p1 = B_ON;					
+					}
+					if(Xpoint>=390&&Xpoint<=460&&Ypoint>=370&&Ypoint<=440)        //心率-1
+					{
+						 sys_stat.refresh = 1;
+						 buttoms.m1 = B_ON;					
+					}
+					if(Xpoint>=560&&Xpoint<=630&&Ypoint>=280&&Ypoint<=350)        //压缩比+0.1
+					{
+						 sys_stat.refresh = 1;
+						 buttoms.p01 = B_ON;					
+					}			
+					if(Xpoint>=560&&Xpoint<=630&&Ypoint>=370&&Ypoint<=440)        //压缩比-0.1
+					{
+						 sys_stat.refresh = 1;
+						 buttoms.m01 = B_ON;					
+					}
+					if(Xpoint>=670&&Xpoint<=770&&Ypoint>=310&&Ypoint<=405)      //确定设定
+					{
+						 sys_stat.refresh = 1;
+						 buttoms.back = B_ON;					
+					}					
+				}
+				break;
+		case 2:	{
+					
+				}
+				break;
+		 default:break;
+	}
+         
 
 	rADCDLY=saveAdcdly; 
 	rADCTSC=rADCTSC&~(1<<8); //开始检测光标按下中断信号

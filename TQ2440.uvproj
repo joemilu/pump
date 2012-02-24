@@ -225,7 +225,7 @@
             <Ro3Chk>0</Ro3Chk>
             <Ir1Chk>0</Ir1Chk>
             <Ir2Chk>0</Ir2Chk>
-            <Ra1Chk>0</Ra1Chk>
+            <Ra1Chk>1</Ra1Chk>
             <Ra2Chk>0</Ra2Chk>
             <Ra3Chk>0</Ra3Chk>
             <Im1Chk>1</Im1Chk>
@@ -278,8 +278,8 @@
               </XRAM>
               <OCR_RVCT1>
                 <Type>1</Type>
-                <StartAddress>0x30000000</StartAddress>
-                <Size>0x4000000</Size>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x200000</Size>
               </OCR_RVCT1>
               <OCR_RVCT2>
                 <Type>1</Type>
@@ -303,8 +303,8 @@
               </OCR_RVCT5>
               <OCR_RVCT6>
                 <Type>0</Type>
-                <StartAddress>0x0</StartAddress>
-                <Size>0x0</Size>
+                <StartAddress>0x31000000</StartAddress>
+                <Size>0x4000000</Size>
               </OCR_RVCT6>
               <OCR_RVCT7>
                 <Type>0</Type>
@@ -319,7 +319,7 @@
               <OCR_RVCT9>
                 <Type>0</Type>
                 <StartAddress>0x40000000</StartAddress>
-                <Size>0x1000</Size>
+                <Size>0x4000</Size>
               </OCR_RVCT9>
               <OCR_RVCT10>
                 <Type>0</Type>

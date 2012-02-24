@@ -21,6 +21,3 @@ SET CPU_CLOCK=0x00000000
 "C:\Keil\ARM\BIN40\ArmCC" --Via "sd_mmc.__i"
 "C:\Keil\ARM\BIN40\ArmCC" --Via "touchpanel.__i"
 "C:\Keil\ARM\BIN40\ArmCC" --Via "tq_logo.__i"
-"C:\Keil\ARM\BIN40\ArmLink" --Via "TQ2440.lnp"
-C:\Keil\ARM\BIN40\fromelf.exe "TQ2440.axf" --i32combined --output "TQ2440.hex"
-fromelf.exe --bin -o TQ2440.bin TQ2440.axf
