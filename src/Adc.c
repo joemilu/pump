@@ -19,26 +19,42 @@ volatile U32 preScaler;
 //==================================================================================		
 int ReadAdc(int ch)
 {
+	U32 rADCCON_save1 = rADCCON;
 	int i;
+	int max = 0;
+	int temp = 0, min = 5000;
+	long templ = 0;
 	static int prevCh=-1;
 
 	rADCCON = (1<<14)|(preScaler<<6)|(ch<<3);		//setup channel
 
 	if(prevCh!=ch)
 	{
-		rADCCON = (1<<14)|(preScaler<<6)|(ch<<3);	//setup channel
-		for(i=0;i<LOOP;i++);							//delay to set up the next channel
 		prevCh=ch;
 	}
-	rADCCON|=0x1;									//start ADC
 
-	while(rADCCON & 0x1);							//check if Enable_start is low
-	while(!(rADCCON & 0x8000));						//check if EC(End of Conversion) flag is high
+	for(i=0;i<7;i++)
+	{
+		rADCCON|=0x1;									//start ADC
+		while(rADCCON & 0x1);							//check if Enable_start is low
+		while(!(rADCCON & 0x8000));						//check if EC(End of Conversion) flag is high
+		temp =	(int)rADCDAT0 & 0x3ff;
+		templ += temp; 
+		if(temp > max)
+			max = temp;
+		else if(temp < min)
+			min = temp;			
+	}
 
-	return ( (int)rADCDAT0 & 0x3ff );
+	templ = templ - max - min;
+
+	rADCCON = rADCCON_save1;
+	return ( templ/5 );
 }
 
 //==================================================================================
+
+
 void Test_Adc(void) 
 {
 	int a2=0; //Initialize variables

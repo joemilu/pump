@@ -72,6 +72,7 @@ typedef void *PVOID;
 #define END_KEY		0x4b
 #define	ESC_KEY		0x1b
 
+//////////////////////////////////////////////////////////////////////////
 #define uint unsigned int
 #define uchar unsigned char
 #define SUCCESS 1
@@ -88,6 +89,10 @@ typedef void *PVOID;
 #define HCLOSED 1
 #define BOTTOM 0
 #define TOP 2
+#define Position_zero 260			//运动的原始零点
+#define M_p 0x08				//正反转
+#define M_n 0x10
+#define AD_Channel 1
 
 #define SAMPLE_RATE	200	//采样率 200HZ
 #define INI_SAMPLE_PERIOD SAMPLE_RATE*20	//初始化采用时间
@@ -95,6 +100,10 @@ typedef void *PVOID;
 #define FILTER_SZ_1	3//滤波长度
 #define FILTER_SZ	5//滤波长度	
 
+#define STAT_START 1
+#define STAT_STOP 3
+#define STAT_ON 2
+#define TIME 1 //时间换算单位 采用时间——>定时器时间
 
 struct SYSTEM_STAT{
 	uint  interface;			//所处界面
@@ -158,6 +167,7 @@ struct PUMP_STAT{
 	uint pwm_rate;
 	uint stat;
 	uint pos;
+	uint period;//定时器时间
 };
 		
 

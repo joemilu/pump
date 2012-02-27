@@ -127,7 +127,7 @@ void RdNF2SDRAM( )
 	U32 i;
 	U32 start_addr = 0x0;
 	unsigned char * to = (unsigned char *)0x30000000;
-	U32 size = 0x100000;
+	U32 size = 0x300000;
 	rNF_Init();
 	switch(rNF_ReadID())
 	{

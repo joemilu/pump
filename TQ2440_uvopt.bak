@@ -297,10 +297,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>77</ColumnNumber>
+      <ColumnNumber>80</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1</TopLine>
-      <CurrentLine>6</CurrentLine>
+      <TopLine>229</TopLine>
+      <CurrentLine>229</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\src\Main.c</PathWithFileName>
       <FilenameWithoutPath>Main.c</FilenameWithoutPath>
@@ -650,28 +650,28 @@
     </File>
     <File>
       <GroupNumber>2</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <FileNumber>33</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>27</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1</TopLine>
-      <CurrentLine>7</CurrentLine>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\inc\global.h</PathWithFileName>
       <FilenameWithoutPath>global.h</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>2</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <FileNumber>34</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1</TopLine>
-      <CurrentLine>26</CurrentLine>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\inc\data.h</PathWithFileName>
       <FilenameWithoutPath>data.h</FilenameWithoutPath>
@@ -687,9 +687,9 @@
       <Documents>
         <Doc>
           <Name>.\src\Main.c</Name>
-          <ColumnNumber>77</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>6</CurrentLine>
+          <ColumnNumber>80</ColumnNumber>
+          <TopLine>229</TopLine>
+          <CurrentLine>229</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\inc\2440addr.h</Name>
@@ -700,7 +700,7 @@
         <Doc>
           <Name>.\inc\def.h</Name>
           <ColumnNumber>14</ColumnNumber>
-          <TopLine>55</TopLine>
+          <TopLine>62</TopLine>
           <CurrentLine>87</CurrentLine>
         </Doc>
         <Doc>
@@ -710,12 +710,6 @@
           <CurrentLine>7</CurrentLine>
         </Doc>
         <Doc>
-          <Name>.\inc\data.h</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>26</CurrentLine>
-        </Doc>
-        <Doc>
           <Name>.\src\2440lib.c</Name>
           <ColumnNumber>5</ColumnNumber>
           <TopLine>205</TopLine>
@@ -723,9 +717,9 @@
         </Doc>
         <Doc>
           <Name>.\inc\LCD_TFT.h</Name>
-          <ColumnNumber>154</ColumnNumber>
-          <TopLine>226</TopLine>
-          <CurrentLine>233</CurrentLine>
+          <ColumnNumber>85</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>1</CurrentLine>
         </Doc>
       </Documents>
     </MDIGroup>

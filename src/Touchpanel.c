@@ -189,70 +189,77 @@ void __irq AdcTsAuto(void)
 					}else if(Xpoint>=600&&Xpoint<=750&&Ypoint>=265&&Ypoint<=415)
 					{
 						 sys_stat.refresh = 1;
-						 buttoms.pressure = B_ON;						
+						 buttoms.pressure = B_ON;
+						 Uart_Printf("< buttom pressure >\n");						 						
 					}
 				}
 				break;
 		case 1:	{
+					if(Xpoint>=695&&Xpoint<=790&&Ypoint>=370&&Ypoint<=440)		//按下返回
+					{
+						 sys_stat.refresh = 1;
+						 buttoms.back = B_ON;
+//						 Uart_Printf("< buttom back >\n");						
+					}										
+				}
+				break;
+		case 2:	{
 					if(Xpoint>=100&&Xpoint<=170&&Ypoint>=280&&Ypoint<=350)        //压缩量+1000
 				  	{
 						 sys_stat.refresh = 1;
 						 buttoms.p1000 = B_ON;														 
-					}	
+					}else	
 					if(Xpoint>=180&&Xpoint<=250&&Ypoint>=280&&Ypoint<=350)        //压缩量-1000
 					{
 						 sys_stat.refresh = 1;
 						 buttoms.m1000 = B_ON;					
-					}	
+					}else	
 					if(Xpoint>=100&&Xpoint<=170&&Ypoint>=370&&Ypoint<=440)        //压缩量+100
 					{
 						 sys_stat.refresh = 1;
 						 buttoms.p100 = B_ON;					
-					}				
+					}else				
 					if(Xpoint>=180&&Xpoint<=250&&Ypoint>=370&&Ypoint<=440)        //压缩量-100
 					{
 						 sys_stat.refresh = 1;
 						 buttoms.m100 = B_ON;					
-					}			
+					}else			
 					if(Xpoint>=310&&Xpoint<=380&&Ypoint>=280&&Ypoint<=350)        //心率+10
 					{
 						 sys_stat.refresh = 1;
 						 buttoms.p10 = B_ON;					
-					}
+					}else
 					if(Xpoint>=390&&Xpoint<=460&&Ypoint>=280&&Ypoint<=350)        //心率-10
 					{
 						 sys_stat.refresh = 1;
 						 buttoms.m10 = B_ON;					
-					}
+					}else
 					if(Xpoint>=310&&Xpoint<=380&&Ypoint>=370&&Ypoint<=440)        //心率+1
 					{
 						 sys_stat.refresh = 1;
 						 buttoms.p1 = B_ON;					
-					}
+					}else
 					if(Xpoint>=390&&Xpoint<=460&&Ypoint>=370&&Ypoint<=440)        //心率-1
 					{
 						 sys_stat.refresh = 1;
 						 buttoms.m1 = B_ON;					
-					}
+					}else
 					if(Xpoint>=560&&Xpoint<=630&&Ypoint>=280&&Ypoint<=350)        //压缩比+0.1
 					{
 						 sys_stat.refresh = 1;
 						 buttoms.p01 = B_ON;					
-					}			
+					}else			
 					if(Xpoint>=560&&Xpoint<=630&&Ypoint>=370&&Ypoint<=440)        //压缩比-0.1
 					{
 						 sys_stat.refresh = 1;
 						 buttoms.m01 = B_ON;					
-					}
+					}else
 					if(Xpoint>=670&&Xpoint<=770&&Ypoint>=310&&Ypoint<=405)      //确定设定
 					{
 						 sys_stat.refresh = 1;
-						 buttoms.back = B_ON;					
+						 buttoms.back = B_ON;
+//						 Uart_Printf("< buttom back >\n");					
 					}					
-				}
-				break;
-		case 2:	{
-					
 				}
 				break;
 		 default:break;

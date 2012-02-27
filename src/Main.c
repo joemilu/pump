@@ -144,15 +144,15 @@ void starttimer0(void);
 void starttimer1(void);
 void starttimer2(void);
 
-struct	SYSTEM_STAT sys_stat;
-struct	THERAPY_CONFIG theo_conf;
-struct	TOUCH_STAT touch_stat;
-struct	BUTTOMS buttoms;
-struct	DATA_STAT rawdata;
-struct	DATA_STAT filtereddata;
-struct	AD_STAT ad_stat;
-struct	HEAT_STAT heart_stat;
-struct	PUMP_STAT pump_stat;
+volatile struct	SYSTEM_STAT sys_stat;
+volatile struct	THERAPY_CONFIG theo_conf;
+volatile struct	TOUCH_STAT touch_stat;
+volatile struct	BUTTOMS buttoms;
+volatile struct	DATA_STAT rawdata;
+volatile struct	DATA_STAT filtereddata;
+volatile struct	AD_STAT ad_stat;
+volatile struct	HEAT_STAT heart_stat;
+volatile struct	PUMP_STAT pump_stat;
 
 extern unsigned char TQ_LOGO_800480[];
 extern unsigned char Presspic[];
@@ -233,8 +233,8 @@ void Main(void)
 
 
 
-	pISR_FIQ = (int)Timer2_ISR;
-	pISR_TIMER0 = (int)Timer0_ISR;
+	pISR_FIQ = (int)Timer0_ISR;
+	pISR_TIMER2 = (int)Timer2_ISR;
 
  	myinit();
 
@@ -247,7 +247,7 @@ void Main(void)
 //			load_interface(sys_stat.interface);
 			switch(sys_stat.interface)
 			{
-				case 0:	{
+				case 0:	{	//主界面
 							if(buttoms.start)
 							{
 								buttoms.start = B_OFF;
@@ -258,24 +258,27 @@ void Main(void)
 								buttoms.set = B_OFF; 
 								sys_stat.interface = 2;
 								load_interface(sys_stat.interface);	
+//								Uart_Printf("< buttom set >\n");
 							}else if(buttoms.pressure)
 							{
 								buttoms.set = B_OFF; 
 								sys_stat.interface = 1;
-								load_interface(sys_stat.interface);								
+								load_interface(sys_stat.interface);	
+															
 							}
 						}
 						break;
-				case 1:	{
+				case 1:	{	//压力检测
 							if(buttoms.back)
 							{
 								buttoms.back = B_OFF;
 								sys_stat.interface = 0;
-								load_interface(sys_stat.interface);										
+								load_interface(sys_stat.interface);	
+									
 							}							
 						}
 						break;
-				case 2:	{
+				case 2:	{	//参数设置
 							if(buttoms.back)
 							{
 								buttoms.back = B_OFF;
@@ -285,7 +288,8 @@ void Main(void)
 						}
 						break;
 				 default:break;
-			}	
+			}
+			sys_stat.refresh = 0;	
 		}
 	}	  	
 
@@ -368,11 +372,37 @@ void Clk1_Disable(void)
 void __irq Timer0_ISR(void) 
 {
 	read();
+
 }
 
 void __irq Timer2_ISR(void)
 {
-
+	Buzzer_Stop();
+	DisableIrq(BIT_TIMER2);
+	ClearPending(BIT_TIMER2);
+	rTCON &= ~0x001000;// 关定时器
+	if(pump_stat.step++<4)
+	{	
+		rTCNTB2 = pump_stat.period *(pump_stat.step);
+		Buzzer_Freq_Set(pump_stat.pwm_rate * pump_stat.step);
+	}	
+	else if(pump_stat.step == 4)
+	{
+		rTCNTB2 = pump_stat.period *14;
+		Buzzer_Freq_Set(pump_stat.pwm_rate * pump_stat.step);
+	}
+	else if(pump_stat.step <8)
+	{
+		rTCNTB2 = pump_stat.period *(8 - pump_stat.step);  
+		Buzzer_Freq_Set(pump_stat.pwm_rate * (8 - pump_stat.step));
+	}
+	else if(pump_stat.step == 8);//停止并且修正；
+	{
+		rTCON &= ~0x001000;// 关定时器
+		return;
+	}
+	rTCON |= 0x003000;// 更新tcnt,开时器	
+	EnableIrq(BIT_TIMER2);	 			
 }
 
 uint read()
@@ -491,15 +521,15 @@ void load_interface(int n)
 
 void starttimer0()
 {
-	rTCFG0 = 0x00000001;		//prescaler = 1+1
+	rTCFG0 |= 0x00000001;		//prescaler = 1+1
 	rTCFG1 &= ~(0xf);
 	rTCFG1 |= 3;				//mux = 1/16
 	rTCNTB0 = 7812;			//分频数为2*16=32  50000000/32=62500*25  7812 1/200 10416 1/150 15625 1/100	  3960 1/400
 	rTCMPB0 =0;	
 	ClearPending(BIT_TIMER0);
-	rTCON &= ~0x00F01F;	//
+	rTCON &= ~0x00001F;	//
 	rTCON |= 0x00700b; //
-	rTCON &= ~0x002002;
+	rTCON &= ~0x000002;
 //	Uart_Printf("\nPCLK = %ld\n",PCLK);
 	EnableIrq(BIT_TIMER0);
 }
@@ -508,4 +538,43 @@ void starttimer1()
 {}
 
 void starttimer2()
-{}
+{
+		pump_stat.stat = STAT_ON;
+		pump_stat.step = 1;
+		pump_stat.pwm_rate = theo_conf.volume/4;//theo_conf.volume*(1+theo_conf.compress_ratio)/4;
+		pump_stat.period = heart_stat.Period*TIME/20;
+		rTCFG0 &= ~(0xff<<8);
+		rTCFG0 |= 124<<8;			//prescaler = 124+1
+		rTCFG1 &= ~(0xf<<8);
+		rTCFG1 |= 2<<8;		//mux = 1/8
+		rTCNTB2 = pump_stat.period;	
+		rTCMPB2 = 0;
+		ClearPending(BIT_TIMER2);
+		rTCON &= ~0x00F000;	//清零
+		rTCON |= 0x003000; // update	and start
+		rTCON &= ~0x002000;//
+		EnableIrq(BIT_TIMER2);
+		if(pump_stat.direction)
+			rGPFDAT=M_p;
+		else
+			rGPFDAT=M_n;			
+		Buzzer_Freq_Set( pump_stat.pwm_rate ) ;
+
+}
+
+/************************自动调整回零********************/
+void Auto_zero(void)
+{
+	while(ReadAdc(AD_Channel)>(Position_zero+4))
+	{
+		rGPFDAT=M_n;
+		Buzzer_Freq_Set(6000);
+	}
+	while(ReadAdc(AD_Channel)<(Position_zero-4))
+	{
+		rGPFDAT=M_p;
+		Buzzer_Freq_Set(6000);
+	}
+	Buzzer_Stop();
+//	Uart_Printf( "Return to zero!" );	
+}

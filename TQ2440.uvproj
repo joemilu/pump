@@ -466,6 +466,11 @@
               <FileType>1</FileType>
               <FilePath>.\src\TQ_LOGO.c</FilePath>
             </File>
+            <File>
+              <FileName>Font_Libs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\Font_Libs.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

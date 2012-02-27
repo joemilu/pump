@@ -4,657 +4,117 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 I:\TQ2440\TQ2440.uvproj
-Project File Date:  02/24/2012
+Project File Date:  02/25/2012
 
 <h2>Output:</h2>
-Build target 'Target 1'
-assembling 2440init.s...
-src\2440init.s(396): warning: A1876W: Use of '|' as a synonym for the :OR: operator is deprecated.
-src\2440init.s:   396 000002e4  orr r1,r0,#UNDEFMODE|NOINT
-src\2440init.s(419): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440init.s:   419 00000324  mov pc,lr
-src\2440init.s(491): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440init.s:     at line 46 in macro MOV_PC_LR in 'src\2440init.s'
-src\2440init.s: 
-src\2440init.s:    46 00000418      mov pc,lr
-src\2440init.s(541): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440init.s:   541 00000494  mov pc,r0
-src\2440init.s(573): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440init.s:   573 000004e4  mov     pc, lr
-src\2440init.s(597): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440init.s:   597 00000534  mov     pc, lr
-src\2440init.s: 0 Errors, 6 Warnings
-compiling Main.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(443): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-linking...
-Program Size: Code=21456 RO-data=24180 RW-data=768112 ZI-data=768128  
-FromELF: creating hex file...
-User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
-"TQ2440.axf" - 0 Error(s), 12 Warning(s).
-Build target 'Target 1'
-compiling Main.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(447): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-linking...
-Program Size: Code=21460 RO-data=24180 RW-data=768112 ZI-data=768124  
-FromELF: creating hex file...
-User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
-"TQ2440.axf" - 0 Error(s), 6 Warning(s).
-compiling Main.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(449): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(457): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(457): error:  #20: identifier "TQ_LOGO_800480" is undefined
-src\Main.c(459): error:  #20: identifier "Setpic" is undefined
-src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-src\Main.c - 2 Error(s), 7 Warning(s).
-Build target 'Target 1'
-compiling Main.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(449): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(457): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(457): error:  #20: identifier "TQ_LOGO_800480" is undefined
-src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-Target not created
-compiling Main.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(449): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(457): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(457): error:  #20: identifier "TQ_LOGO_800480" is undefined
-src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-src\Main.c - 1 Error(s), 7 Warning(s).
-Build target 'Target 1'
-assembling 2440init.s...
-src\2440init.s(396): warning: A1876W: Use of '|' as a synonym for the :OR: operator is deprecated.
-src\2440init.s:   396 000002e4  orr r1,r0,#UNDEFMODE|NOINT
-src\2440init.s(419): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440init.s:   419 00000324  mov pc,lr
-src\2440init.s(491): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440init.s:     at line 46 in macro MOV_PC_LR in 'src\2440init.s'
-src\2440init.s: 
-src\2440init.s:    46 00000418      mov pc,lr
-src\2440init.s(541): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440init.s:   541 00000494  mov pc,r0
-src\2440init.s(573): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440init.s:   573 000004e4  mov     pc, lr
-src\2440init.s(597): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440init.s:   597 00000534  mov     pc, lr
-src\2440init.s: 0 Errors, 6 Warnings
-assembling 2440slib.s...
-src\2440slib.s(35): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000010        mov pc,lr
-src\2440slib.s(41): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 0000001c        mov pc,lr
-src\2440slib.s(54): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000030        mov pc,lr
-src\2440slib.s(61): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000038        mov pc,lr
-src\2440slib.s(71): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000048        mov pc,lr
-src\2440slib.s(75): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000050        mov pc,lr
-src\2440slib.s(79): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000058        mov pc,lr
-src\2440slib.s(98): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000068        mov pc,lr
-src\2440slib.s(106): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000078        mov pc,lr
-src\2440slib.s(114): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000088        mov pc,lr
-src\2440slib.s(122): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000098        mov pc,lr
-src\2440slib.s(130): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 000000a8        mov pc,lr
-src\2440slib.s(138): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 000000b8        mov pc,lr
-src\2440slib.s(146): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 000000c8        mov pc,lr
-src\2440slib.s(154): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 000000d8        mov pc,lr
-src\2440slib.s(163): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 000000e8        mov pc,lr
-src\2440slib.s(172): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 000000f8        mov pc,lr
-src\2440slib.s(182): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000100        mov pc,lr
-src\2440slib.s(192): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000108        mov pc,lr
-src\2440slib.s(201): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000110        mov pc,lr
-src\2440slib.s(207): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000118        mov pc,lr
-src\2440slib.s(214): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000120        mov pc,lr
-src\2440slib.s(221): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000128        mov pc,lr
-src\2440slib.s(227): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000130        mov pc,lr
-src\2440slib.s(234): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000138        mov pc,lr
-src\2440slib.s(241): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000140        mov pc,lr
-src\2440slib.s(248): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000148        mov pc,lr
-src\2440slib.s(255): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000150        mov pc,lr
-src\2440slib.s(262): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000158        mov pc,lr
-src\2440slib.s(268): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000160        mov pc,lr
-src\2440slib.s(277): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000168        mov pc,lr
-src\2440slib.s(283): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000170        mov pc,lr
-src\2440slib.s(290): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000178        mov pc,lr
-src\2440slib.s(296): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000180        mov pc,lr
-src\2440slib.s(303): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000188        mov pc,lr
-src\2440slib.s(313): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000190        mov pc,lr
-src\2440slib.s(320): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 00000198        mov pc,lr
-src\2440slib.s(330): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 000001a0        mov pc,lr
-src\2440slib.s(337): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 000001a8        mov pc,lr
-src\2440slib.s(347): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
-src\2440slib.s:     at line 24 in macro MOV_PC_LR in 'src\2440slib.s'
-src\2440slib.s: 
-src\2440slib.s:    24 000001b0        mov pc,lr
-src\2440slib.s: 0 Errors, 40 Warnings
-compiling nand.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\nand.c(36): warning:  #550-D: variable "pMID" was set but never used
-src\nand.c(38): warning:  #550-D: variable "nBuff" was set but never used
-src\nand.c(39): warning:  #550-D: variable "n4thcycle" was set but never used
-compiling 2440lib.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
 compiling Adc.c...
 .\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
 .\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling keyscan.c...
+src\Adc.c(25): error:  #20: identifier "min" is undefined
+src\Adc.c - 1 Error(s), 4 Warning(s).
+compiling Adc.c...
 .\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
 .\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling LCD_TFT.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Adc.c - 0 Error(s), 4 Warning(s).
 compiling Main.c...
+.\inc\def.h(92): warning:  #2775-D: white space is required between the macro name "M_p" and its replacement text
+.\inc\def.h(93): warning:  #2775-D: white space is required between the macro name "M_n" and its replacement text
 .\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
 .\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(449): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(457): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(457): error:  #20: identifier "TQ_LOGO_800480" is undefined
+src\Main.c(471): warning:  #61-D: integer operation result is out of range
+src\Main.c(474): warning:  #177-D: label "fail" was declared but never referenced
+src\Main.c(482): warning:  #223-D: function "Paint_Bmp" declared implicitly
+src\Main.c(517): warning:  #223-D: function "ReadAdc" declared implicitly
+src\Main.c(518): error:  #20: identifier "AD_data" is undefined
+src\Main.c(520): error:  #29: expected an expression
+src\Main.c(521): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(526): error:  #29: expected an expression
+src\Main.c(527): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(530): warning:  #223-D: function "Buzzer_Stop" declared implicitly
+src\Main.c(516): warning:  #550-D: variable "temp" was set but never used
 src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-compiling memtest.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling mmu.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling Pic.c...
-src\Pic.c(43458): warning:  #1-D: last line of file ends without a newline
-compiling profile.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\profile.c(36): warning:  #177-D: variable "divider" was declared but never referenced
-compiling RTC.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling SD_MMC.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(152): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(155): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(175): warning:  #61-D: integer operation result is out of range
-compiling TQ_LOGO.c...
-Target not created
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(152): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(155): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(175): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c - 0 Error(s), 12 Warning(s).
+src\Main.c - 3 Error(s), 15 Warning(s).
 compiling Main.c...
 .\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
 .\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(449): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(457): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(457): error:  #20: identifier "TQ_LOGO_800480" is undefined
+src\Main.c(471): warning:  #61-D: integer operation result is out of range
+src\Main.c(474): warning:  #177-D: label "fail" was declared but never referenced
+src\Main.c(482): warning:  #223-D: function "Paint_Bmp" declared implicitly
+src\Main.c(517): warning:  #223-D: function "ReadAdc" declared implicitly
+src\Main.c(518): error:  #20: identifier "AD_data" is undefined
+src\Main.c(521): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(527): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(530): warning:  #223-D: function "Buzzer_Stop" declared implicitly
+src\Main.c(516): warning:  #550-D: variable "temp" was set but never used
 src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-src\Main.c - 1 Error(s), 7 Warning(s).
+src\Main.c - 1 Error(s), 13 Warning(s).
 compiling Main.c...
 .\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
 .\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(449): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(457): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(459): error:  #20: identifier "Setpic" is undefined
+src\Main.c(471): warning:  #61-D: integer operation result is out of range
+src\Main.c(474): warning:  #177-D: label "fail" was declared but never referenced
+src\Main.c(482): warning:  #223-D: function "Paint_Bmp" declared implicitly
+src\Main.c(517): warning:  #223-D: function "ReadAdc" declared implicitly
+src\Main.c(521): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(527): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(530): warning:  #223-D: function "Buzzer_Stop" declared implicitly
 src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-src\Main.c - 1 Error(s), 7 Warning(s).
-Build target 'Target 1'
+src\Main.c - 0 Error(s), 12 Warning(s).
 compiling Main.c...
 .\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
 .\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(449): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(457): warning:  #223-D: function "Paint_Bmp" declared implicitly
+src\Main.c(471): warning:  #61-D: integer operation result is out of range
+src\Main.c(474): warning:  #177-D: label "fail" was declared but never referenced
+src\Main.c(482): warning:  #223-D: function "Paint_Bmp" declared implicitly
+src\Main.c(516): warning:  #223-D: function "ReadAdc" declared implicitly
+src\Main.c(519): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(524): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(526): warning:  #223-D: function "Buzzer_Stop" declared implicitly
 src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-linking...
-Program Size: Code=21648 RO-data=24180 RW-data=2304112 ZI-data=768128  
-FromELF: creating hex file...
-User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
-"TQ2440.axf" - 0 Error(s), 7 Warning(s).
-Build target 'Target 1'
+src\Main.c - 0 Error(s), 12 Warning(s).
 compiling Main.c...
 .\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
 .\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(453): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(461): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-linking...
-Program Size: Code=21644 RO-data=24180 RW-data=2304112 ZI-data=768124  
-FromELF: creating hex file...
-User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
-"TQ2440.axf" - 0 Error(s), 7 Warning(s).
-compiling Main.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(289): error:  #20: identifier "SYSTEM_STAT" is undefined
-src\Main.c(297): error:  #136: struct "BUTTOMS" has no field "set"
-src\Main.c(298): error:  #136: struct "BUTTOMS" has no field "pressure"
-src\Main.c(468): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(476): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-src\Main.c - 3 Error(s), 7 Warning(s).
-Build target 'Target 1'
-compiling Main.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(291): error:  #20: identifier "SYSTEM_STAT" is undefined
-src\Main.c(470): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(478): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-Target not created
-compiling Main.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(291): error:  #20: identifier "SYSTEM_STAT" is undefined
-src\Main.c(470): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(478): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-src\Main.c - 1 Error(s), 7 Warning(s).
-compiling Main.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(293): error:  #20: identifier "SYSTEM_STAT" is undefined
-src\Main.c(470): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(478): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-src\Main.c - 1 Error(s), 7 Warning(s).
-compiling Main.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(470): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(478): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-src\Main.c - 0 Error(s), 7 Warning(s).
-Build target 'Target 1'
-linking...
-Program Size: Code=21780 RO-data=24180 RW-data=2304104 ZI-data=768140  
-FromELF: creating hex file...
-User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
-"TQ2440.axf" - 0 Error(s), 0 Warning(s).
-compiling Main.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(484): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(492): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-src\Main.c - 0 Error(s), 7 Warning(s).
-Build target 'Target 1'
-linking...
-Program Size: Code=21864 RO-data=24180 RW-data=2304104 ZI-data=768148  
-FromELF: creating hex file...
-User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
-"TQ2440.axf" - 0 Error(s), 0 Warning(s).
-compiling Main.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(495): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(503): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-src\Main.c - 0 Error(s), 7 Warning(s).
-Build target 'Target 1'
-linking...
-Program Size: Code=21948 RO-data=24180 RW-data=2304104 ZI-data=768144  
-FromELF: creating hex file...
-User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
-"TQ2440.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling Main.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(484): error:  #20: identifier "AdcTsAuto" is undefined
 src\Main.c(486): warning:  #61-D: integer operation result is out of range
-src\Main.c(500): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(508): warning:  #223-D: function "Paint_Bmp" declared implicitly
+src\Main.c(489): warning:  #177-D: label "fail" was declared but never referenced
+src\Main.c(497): warning:  #223-D: function "Paint_Bmp" declared implicitly
+src\Main.c(531): warning:  #223-D: function "ReadAdc" declared implicitly
+src\Main.c(534): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(539): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(541): warning:  #223-D: function "Buzzer_Stop" declared implicitly
 src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-Target not created
+src\Main.c - 0 Error(s), 12 Warning(s).
 Build target 'Target 1'
-compiling Main.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(488): warning:  #61-D: integer operation result is out of range
-src\Main.c(502): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(510): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-linking...
-Program Size: Code=22760 RO-data=24180 RW-data=2304116 ZI-data=768144  
-FromELF: creating hex file...
-User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
-"TQ2440.axf" - 0 Error(s), 8 Warning(s).
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-.\inc\global.h(1): error:  #20: identifier "SYSTEM_STAT" is undefined
-.\inc\global.h(2): error:  #20: identifier "THERAPY_CONFIG" is undefined
-.\inc\global.h(3): error:  #20: identifier "TOUCH_STAT" is undefined
-.\inc\global.h(4): error:  #20: identifier "BUTTOMS" is undefined
-.\inc\global.h(5): error:  #20: identifier "DATA_STAT" is undefined
-.\inc\global.h(6): error:  #20: identifier "AD_STAT" is undefined
-.\inc\global.h(7): error:  #20: identifier "HEAT_STAT" is undefined
-.\inc\global.h(8): error:  #20: identifier "PUMP_STAT" is undefined
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(152): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(155): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(177): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c - 8 Error(s), 12 Warning(s).
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-.\inc\global.h(1): error:  #20: identifier "SYSTEM_STAT" is undefined
-.\inc\global.h(2): error:  #20: identifier "THERAPY_CONFIG" is undefined
-.\inc\global.h(3): error:  #20: identifier "TOUCH_STAT" is undefined
-.\inc\global.h(4): error:  #20: identifier "BUTTOMS" is undefined
-.\inc\global.h(5): error:  #20: identifier "DATA_STAT" is undefined
-.\inc\global.h(6): error:  #20: identifier "AD_STAT" is undefined
-.\inc\global.h(7): error:  #20: identifier "HEAT_STAT" is undefined
-.\inc\global.h(8): error:  #20: identifier "PUMP_STAT" is undefined
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(190): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c - 8 Error(s), 12 Warning(s).
-compiling Touchpanel.c...
-.\inc\def.h(29): error:  #20: identifier "uint" is undefined
-.\inc\def.h(30): error:  #20: identifier "uint" is undefined
-.\inc\def.h(36): error:  #20: identifier "uint" is undefined
-.\inc\def.h(40): error:  #20: identifier "uint" is undefined
-.\inc\def.h(41): error:  #20: identifier "uint" is undefined
-.\inc\def.h(46): error:  #20: identifier "uint" is undefined
-.\inc\def.h(47): error:  #20: identifier "uint" is undefined
-.\inc\def.h(48): error:  #20: identifier "uint" is undefined
-.\inc\def.h(49): error:  #20: identifier "uint" is undefined
-.\inc\def.h(50): error:  #20: identifier "uint" is undefined
-.\inc\def.h(54): error:  #20: identifier "uint" is undefined
-.\inc\def.h(58): error:  #20: identifier "uint" is undefined
-.\inc\def.h(62): error:  #20: identifier "uint" is undefined
-.\inc\def.h(63): error:  #20: identifier "uint" is undefined
-.\inc\def.h(64): error:  #20: identifier "uint" is undefined
-.\inc\def.h(65): error:  #20: identifier "uint" is undefined
-.\inc\def.h(66): error:  #20: identifier "uint" is undefined
-.\inc\def.h(68): error:  #20: identifier "uint" is undefined
-.\inc\def.h(69): error:  #20: identifier "uint" is undefined
-.\inc\def.h(71): error:  #20: identifier "uint" is undefined
-.\inc\def.h(75): error:  #20: identifier "uint" is undefined
-.\inc\def.h(76): error:  #20: identifier "uint" is undefined
-.\inc\def.h(77): error:  #20: identifier "uint" is undefined
-.\inc\def.h(78): error:  #20: identifier "uint" is undefined
-.\inc\def.h(79): error:  #20: identifier "uint" is undefined
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-.\inc\global.h(3): error:  #20: identifier "SYSTEM_STAT" is undefined
-.\inc\global.h(4): error:  #20: identifier "THERAPY_CONFIG" is undefined
-.\inc\global.h(5): error:  #20: identifier "TOUCH_STAT" is undefined
-.\inc\global.h(6): error:  #20: identifier "BUTTOMS" is undefined
-.\inc\global.h(7): error:  #20: identifier "DATA_STAT" is undefined
-src\Touchpanel.c - 30 Error(s), 4 Warning(s).
-compiling Main.c...
-.\inc\def.h(29): error:  #20: identifier "uint" is undefined
-.\inc\def.h(30): error:  #20: identifier "uint" is undefined
-.\inc\def.h(36): error:  #20: identifier "uint" is undefined
-.\inc\def.h(40): error:  #20: identifier "uint" is undefined
-.\inc\def.h(41): error:  #20: identifier "uint" is undefined
-.\inc\def.h(46): error:  #20: identifier "uint" is undefined
-.\inc\def.h(47): error:  #20: identifier "uint" is undefined
-.\inc\def.h(48): error:  #20: identifier "uint" is undefined
-.\inc\def.h(49): error:  #20: identifier "uint" is undefined
-.\inc\def.h(50): error:  #20: identifier "uint" is undefined
-.\inc\def.h(54): error:  #20: identifier "uint" is undefined
-.\inc\def.h(58): error:  #20: identifier "uint" is undefined
-.\inc\def.h(62): error:  #20: identifier "uint" is undefined
-.\inc\def.h(63): error:  #20: identifier "uint" is undefined
-.\inc\def.h(64): error:  #20: identifier "uint" is undefined
-.\inc\def.h(65): error:  #20: identifier "uint" is undefined
-.\inc\def.h(66): error:  #20: identifier "uint" is undefined
-.\inc\def.h(68): error:  #20: identifier "uint" is undefined
-.\inc\def.h(69): error:  #20: identifier "uint" is undefined
-.\inc\def.h(71): error:  #20: identifier "uint" is undefined
-.\inc\def.h(75): error:  #20: identifier "uint" is undefined
-.\inc\def.h(76): error:  #20: identifier "uint" is undefined
-.\inc\def.h(77): error:  #20: identifier "uint" is undefined
-.\inc\def.h(78): error:  #20: identifier "uint" is undefined
-.\inc\def.h(79): error:  #20: identifier "uint" is undefined
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(71): error:  #101: "SYSTEM_STAT" has already been declared in the current scope
-src\Main.c(76): error:  #101: "THERAPY_CONFIG" has already been declared in the current scope
-src\Main.c(82): error:  #101: "TOUCH_STAT" has already been declared in the current scope
-src\Main.c(88): error:  #101: "BUTTOMS" has already been declared in the current scope
-src\Main.c(96): error:  #101: "DATA_STAT" has already been declared in the current scope
-src\Main.c - 30 Error(s), 4 Warning(s).
-compiling Main.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(486): error:  #20: identifier "AdcTsAuto" is undefined
-src\Main.c(488): warning:  #61-D: integer operation result is out of range
-src\Main.c(502): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(510): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-src\Main.c - 1 Error(s), 8 Warning(s).
-compiling Main.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(488): warning:  #61-D: integer operation result is out of range
-src\Main.c(502): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(510): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-src\Main.c - 0 Error(s), 8 Warning(s).
-Build target 'Target 1'
+assembling 2440init.s...
+src\2440init.s(396): warning: A1876W: Use of '|' as a synonym for the :OR: operator is deprecated.
+src\2440init.s:   396 000002e4  orr r1,r0,#UNDEFMODE|NOINT
+src\2440init.s(419): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440init.s:   419 00000324  mov pc,lr
+src\2440init.s(491): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440init.s:     at line 46 in macro MOV_PC_LR in 'src\2440init.s'
+src\2440init.s: 
+src\2440init.s:    46 00000418      mov pc,lr
+src\2440init.s(541): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440init.s:   541 00000494  mov pc,r0
+src\2440init.s(573): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440init.s:   573 000004e4  mov     pc, lr
+src\2440init.s(597): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+src\2440init.s:   597 00000534  mov     pc, lr
+src\2440init.s: 0 Errors, 6 Warnings
 compiling nand.c...
 .\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
@@ -709,764 +169,6 @@ compiling SD_MMC.c...
 .\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
 .\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-.\inc\global.h(3): error:  #20: identifier "SYSTEM_STAT" is undefined
-.\inc\global.h(4): error:  #20: identifier "THERAPY_CONFIG" is undefined
-.\inc\global.h(5): error:  #20: identifier "TOUCH_STAT" is undefined
-.\inc\global.h(6): error:  #20: identifier "BUTTOMS" is undefined
-.\inc\global.h(7): error:  #20: identifier "DATA_STAT" is undefined
-.\inc\global.h(8): error:  #20: identifier "AD_STAT" is undefined
-.\inc\global.h(9): error:  #20: identifier "HEAT_STAT" is undefined
-.\inc\global.h(10): error:  #20: identifier "PUMP_STAT" is undefined
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(190): warning:  #61-D: integer operation result is out of range
-Target not created
-compiling Main.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(436): warning:  #61-D: integer operation result is out of range
-src\Main.c(450): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(458): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-src\Main.c - 0 Error(s), 8 Warning(s).
-Build target 'Target 1'
-compiling nand.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\nand.c(36): warning:  #550-D: variable "pMID" was set but never used
-src\nand.c(38): warning:  #550-D: variable "nBuff" was set but never used
-src\nand.c(39): warning:  #550-D: variable "n4thcycle" was set but never used
-compiling 2440lib.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling Adc.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling keyscan.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling LCD_TFT.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling memtest.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling mmu.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling profile.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\profile.c(36): warning:  #177-D: variable "divider" was declared but never referenced
-compiling RTC.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling SD_MMC.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-.\inc\global.h(3): error:  #20: identifier "SYSTEM_STAT" is undefined
-.\inc\global.h(4): error:  #20: identifier "THERAPY_CONFIG" is undefined
-.\inc\global.h(5): error:  #20: identifier "TOUCH_STAT" is undefined
-.\inc\global.h(6): error:  #20: identifier "BUTTOMS" is undefined
-.\inc\global.h(7): error:  #20: identifier "DATA_STAT" is undefined
-.\inc\global.h(8): error:  #20: identifier "AD_STAT" is undefined
-.\inc\global.h(9): error:  #20: identifier "HEAT_STAT" is undefined
-.\inc\global.h(10): error:  #20: identifier "PUMP_STAT" is undefined
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(190): warning:  #61-D: integer operation result is out of range
-Target not created
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-.\inc\global.h(3): error:  #20: identifier "SYSTEM_STAT" is undefined
-.\inc\global.h(4): error:  #20: identifier "THERAPY_CONFIG" is undefined
-.\inc\global.h(5): error:  #20: identifier "TOUCH_STAT" is undefined
-.\inc\global.h(6): error:  #20: identifier "BUTTOMS" is undefined
-.\inc\global.h(7): error:  #20: identifier "DATA_STAT" is undefined
-.\inc\global.h(8): error:  #20: identifier "AD_STAT" is undefined
-.\inc\global.h(9): error:  #20: identifier "HEAT_STAT" is undefined
-.\inc\global.h(10): error:  #20: identifier "PUMP_STAT" is undefined
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(190): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c - 8 Error(s), 12 Warning(s).
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-.\inc\global.h(3): error:  #20: identifier "SYSTEM_STAT" is undefined
-.\inc\global.h(4): error:  #20: identifier "THERAPY_CONFIG" is undefined
-.\inc\global.h(5): error:  #20: identifier "TOUCH_STAT" is undefined
-.\inc\global.h(6): error:  #20: identifier "BUTTOMS" is undefined
-.\inc\global.h(7): error:  #20: identifier "DATA_STAT" is undefined
-.\inc\global.h(8): error:  #20: identifier "AD_STAT" is undefined
-.\inc\global.h(9): error:  #20: identifier "HEAT_STAT" is undefined
-.\inc\global.h(10): error:  #20: identifier "PUMP_STAT" is undefined
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(190): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c - 8 Error(s), 12 Warning(s).
-Build target 'Target 1'
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-.\inc\global.h(3): error:  #20: identifier "SYSTEM_STAT" is undefined
-.\inc\global.h(4): error:  #20: identifier "THERAPY_CONFIG" is undefined
-.\inc\global.h(5): error:  #20: identifier "TOUCH_STAT" is undefined
-.\inc\global.h(6): error:  #20: identifier "BUTTOMS" is undefined
-.\inc\global.h(7): error:  #20: identifier "DATA_STAT" is undefined
-.\inc\global.h(8): error:  #20: identifier "AD_STAT" is undefined
-.\inc\global.h(9): error:  #20: identifier "HEAT_STAT" is undefined
-.\inc\global.h(10): error:  #20: identifier "PUMP_STAT" is undefined
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(190): warning:  #61-D: integer operation result is out of range
-Target not created
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-.\inc\global.h(3): error:  #20: identifier "SYSTEM_STAT" is undefined
-.\inc\global.h(4): error:  #20: identifier "THERAPY_CONFIG" is undefined
-.\inc\global.h(5): error:  #20: identifier "TOUCH_STAT" is undefined
-.\inc\global.h(6): error:  #20: identifier "BUTTOMS" is undefined
-.\inc\global.h(7): error:  #20: identifier "DATA_STAT" is undefined
-.\inc\global.h(8): error:  #20: identifier "AD_STAT" is undefined
-.\inc\global.h(9): error:  #20: identifier "HEAT_STAT" is undefined
-.\inc\global.h(10): error:  #20: identifier "PUMP_STAT" is undefined
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(190): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c - 8 Error(s), 12 Warning(s).
-compiling Main.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(436): warning:  #61-D: integer operation result is out of range
-src\Main.c(450): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(458): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-src\Main.c - 0 Error(s), 8 Warning(s).
-compiling Main.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(488): warning:  #61-D: integer operation result is out of range
-src\Main.c(502): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(510): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-src\Main.c - 0 Error(s), 8 Warning(s).
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(173): error:  #70: incomplete type is not allowed
-src\Touchpanel.c(190): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c - 1 Error(s), 12 Warning(s).
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(173): error:  #70: incomplete type is not allowed
-src\Touchpanel.c(190): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(125): warning:  #550-D: variable "Xpoint" was set but never used
-src\Touchpanel.c(125): warning:  #550-D: variable "Ypoint" was set but never used
-src\Touchpanel.c - 1 Error(s), 14 Warning(s).
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(173): error:  #70: incomplete type is not allowed
-src\Touchpanel.c(184): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(125): warning:  #550-D: variable "Xpoint" was set but never used
-src\Touchpanel.c(125): warning:  #550-D: variable "Ypoint" was set but never used
-src\Touchpanel.c - 1 Error(s), 14 Warning(s).
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(180): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(125): warning:  #550-D: variable "Xpoint" was set but never used
-src\Touchpanel.c(125): warning:  #550-D: variable "Ypoint" was set but never used
-src\Touchpanel.c - 0 Error(s), 14 Warning(s).
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(173): error:  #70: incomplete type is not allowed
-src\Touchpanel.c(183): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(125): warning:  #550-D: variable "Xpoint" was set but never used
-src\Touchpanel.c(125): warning:  #550-D: variable "Ypoint" was set but never used
-src\Touchpanel.c - 1 Error(s), 14 Warning(s).
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(173): error:  #70: incomplete type is not allowed
-src\Touchpanel.c(183): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(125): warning:  #550-D: variable "Xpoint" was set but never used
-src\Touchpanel.c(125): warning:  #550-D: variable "Ypoint" was set but never used
-src\Touchpanel.c - 1 Error(s), 14 Warning(s).
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(173): error:  #70: incomplete type is not allowed
-src\Touchpanel.c(174): error:  #70: incomplete type is not allowed
-src\Touchpanel.c(184): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(125): warning:  #550-D: variable "Xpoint" was set but never used
-src\Touchpanel.c(125): warning:  #550-D: variable "Ypoint" was set but never used
-src\Touchpanel.c - 2 Error(s), 14 Warning(s).
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(184): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(125): warning:  #550-D: variable "Xpoint" was set but never used
-src\Touchpanel.c(125): warning:  #550-D: variable "Ypoint" was set but never used
-src\Touchpanel.c - 0 Error(s), 14 Warning(s).
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(184): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(125): warning:  #550-D: variable "Xpoint" was set but never used
-src\Touchpanel.c(125): warning:  #550-D: variable "Ypoint" was set but never used
-src\Touchpanel.c - 0 Error(s), 14 Warning(s).
-compiling Main.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(71): error:  #101: "SYSTEM_STAT" has already been declared in the current scope
-src\Main.c(76): error:  #101: "THERAPY_CONFIG" has already been declared in the current scope
-src\Main.c(82): error:  #101: "TOUCH_STAT" has already been declared in the current scope
-src\Main.c(88): error:  #101: "BUTTOMS" has already been declared in the current scope
-src\Main.c(96): error:  #101: "DATA_STAT" has already been declared in the current scope
-src\Main.c(100): error:  #101: "AD_STAT" has already been declared in the current scope
-src\Main.c(104): error:  #101: "HEAT_STAT" has already been declared in the current scope
-src\Main.c(117): error:  #101: "PUMP_STAT" has already been declared in the current scope
-src\Main.c(488): warning:  #61-D: integer operation result is out of range
-src\Main.c(502): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(510): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-src\Main.c - 8 Error(s), 8 Warning(s).
-compiling Main.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(436): warning:  #61-D: integer operation result is out of range
-src\Main.c(450): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(458): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-src\Main.c - 0 Error(s), 8 Warning(s).
-Build target 'Target 1'
-compiling nand.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\nand.c(36): warning:  #550-D: variable "pMID" was set but never used
-src\nand.c(38): warning:  #550-D: variable "nBuff" was set but never used
-src\nand.c(39): warning:  #550-D: variable "n4thcycle" was set but never used
-compiling 2440lib.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling Adc.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling keyscan.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling LCD_TFT.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling Main.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(436): warning:  #61-D: integer operation result is out of range
-src\Main.c(450): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(458): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-compiling memtest.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling mmu.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling profile.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\profile.c(36): warning:  #177-D: variable "divider" was declared but never referenced
-compiling RTC.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling SD_MMC.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-linking...
-Program Size: Code=23296 RO-data=24180 RW-data=2304116 ZI-data=768144  
-FromELF: creating hex file...
-User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
-"TQ2440.axf" - 0 Error(s), 52 Warning(s).
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(187): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(125): warning:  #550-D: variable "Xpoint" was set but never used
-src\Touchpanel.c(125): warning:  #550-D: variable "Ypoint" was set but never used
-src\Touchpanel.c - 0 Error(s), 14 Warning(s).
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(187): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(125): warning:  #550-D: variable "Xpoint" was set but never used
-src\Touchpanel.c(125): warning:  #550-D: variable "Ypoint" was set but never used
-src\Touchpanel.c - 0 Error(s), 14 Warning(s).
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(148): error:  #20: identifier "Xpoint" is undefined
-src\Touchpanel.c(149): error:  #20: identifier "Ypoint" is undefined
-src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(187): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c - 2 Error(s), 12 Warning(s).
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(187): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(125): warning:  #550-D: variable "Xpoint" was set but never used
-src\Touchpanel.c(125): warning:  #550-D: variable "Ypoint" was set but never used
-src\Touchpanel.c - 0 Error(s), 14 Warning(s).
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(180): error:  #20: identifier "bottoms" is undefined
-src\Touchpanel.c(194): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c - 1 Error(s), 12 Warning(s).
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(194): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c - 0 Error(s), 12 Warning(s).
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(206): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c - 0 Error(s), 12 Warning(s).
-Build target 'Target 1'
-linking...
-Program Size: Code=23604 RO-data=24180 RW-data=2304116 ZI-data=768148  
-FromELF: creating hex file...
-User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
-"TQ2440.axf" - 0 Error(s), 0 Warning(s).
-compiling Main.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(436): warning:  #61-D: integer operation result is out of range
-src\Main.c(450): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(458): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-src\Main.c - 0 Error(s), 8 Warning(s).
-Build target 'Target 1'
-linking...
-Program Size: Code=23604 RO-data=24180 RW-data=2304116 ZI-data=768148  
-FromELF: creating hex file...
-User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
-"TQ2440.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling Main.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(441): warning:  #61-D: integer operation result is out of range
-src\Main.c(456): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(464): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-linking...
-Program Size: Code=23676 RO-data=24180 RW-data=2304116 ZI-data=768148  
-FromELF: creating hex file...
-User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
-"TQ2440.axf" - 0 Error(s), 8 Warning(s).
-Build target 'Target 1'
-linking...
-Program Size: Code=23676 RO-data=24180 RW-data=2304116 ZI-data=768148  
-FromELF: creating hex file...
-User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
-"TQ2440.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling Main.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(446): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(454): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-linking...
-Program Size: Code=21948 RO-data=24180 RW-data=2304104 ZI-data=768144  
-FromELF: creating hex file...
-User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
-"TQ2440.axf" - 0 Error(s), 7 Warning(s).
-Build target 'Target 1'
-compiling Main.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(452): warning:  #61-D: integer operation result is out of range
-src\Main.c(455): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(463): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-linking...
-Program Size: Code=23676 RO-data=24180 RW-data=2304116 ZI-data=768148  
-FromELF: creating hex file...
-User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
-"TQ2440.axf" - 0 Error(s), 8 Warning(s).
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(206): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c - 0 Error(s), 12 Warning(s).
-Build target 'Target 1'
-linking...
-Program Size: Code=23676 RO-data=24180 RW-data=2304116 ZI-data=768148  
-FromELF: creating hex file...
-User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
-"TQ2440.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-linking...
-Program Size: Code=23676 RO-data=24180 RW-data=2304116 ZI-data=768148  
-FromELF: creating hex file...
-User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
-"TQ2440.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling nand.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\nand.c(36): warning:  #550-D: variable "pMID" was set but never used
-src\nand.c(38): warning:  #550-D: variable "nBuff" was set but never used
-src\nand.c(39): warning:  #550-D: variable "n4thcycle" was set but never used
-compiling 2440lib.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling Adc.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling keyscan.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling LCD_TFT.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling Main.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(465): warning:  #61-D: integer operation result is out of range
-src\Main.c(468): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(476): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-compiling memtest.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling mmu.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling profile.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\profile.c(36): warning:  #177-D: variable "divider" was declared but never referenced
-compiling RTC.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling SD_MMC.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-compiling Touchpanel.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
-src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
-src\Touchpanel.c(263): warning:  #61-D: integer operation result is out of range
-linking...
-Program Size: Code=24400 RO-data=24180 RW-data=2304116 ZI-data=768184  
-FromELF: creating hex file...
-User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
-"TQ2440.axf" - 0 Error(s), 64 Warning(s).
-compiling LCD_TFT.c...
-.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
-.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
-.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\LCD_TFT.c - 0 Error(s), 4 Warning(s).
-Build target 'Target 1'
 compiling Touchpanel.c...
 .\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
@@ -1480,9 +182,371 @@ src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change 
 src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
 src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
 src\Touchpanel.c(266): warning:  #61-D: integer operation result is out of range
-compiling Font_Libs.c...
 linking...
-Program Size: Code=24784 RO-data=292564 RW-data=2304116 ZI-data=768184  
+Program Size: Code=26728 RO-data=292564 RW-data=2304124 ZI-data=768188  
+FromELF: creating hex file...
+User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
+"TQ2440.axf" - 0 Error(s), 62 Warning(s).
+compiling nand.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\nand.c(36): warning:  #550-D: variable "pMID" was set but never used
+src\nand.c(38): warning:  #550-D: variable "nBuff" was set but never used
+src\nand.c(39): warning:  #550-D: variable "n4thcycle" was set but never used
+src\nand.c - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=26728 RO-data=292564 RW-data=2304124 ZI-data=768188  
+FromELF: creating hex file...
+User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
+"TQ2440.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling nand.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\nand.c(36): warning:  #550-D: variable "pMID" was set but never used
+src\nand.c(38): warning:  #550-D: variable "nBuff" was set but never used
+src\nand.c(39): warning:  #550-D: variable "n4thcycle" was set but never used
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Main.c(486): warning:  #61-D: integer operation result is out of range
+src\Main.c(489): warning:  #177-D: label "fail" was declared but never referenced
+src\Main.c(497): warning:  #223-D: function "Paint_Bmp" declared implicitly
+src\Main.c(531): warning:  #223-D: function "ReadAdc" declared implicitly
+src\Main.c(534): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(539): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(541): warning:  #223-D: function "Buzzer_Stop" declared implicitly
+src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
+compiling Touchpanel.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(270): warning:  #61-D: integer operation result is out of range
+linking...
+Program Size: Code=26796 RO-data=292564 RW-data=2304124 ZI-data=768192  
+FromELF: creating hex file...
+User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
+"TQ2440.axf" - 0 Error(s), 31 Warning(s).
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Main.c(489): warning:  #61-D: integer operation result is out of range
+src\Main.c(492): warning:  #177-D: label "fail" was declared but never referenced
+src\Main.c(500): warning:  #223-D: function "Paint_Bmp" declared implicitly
+src\Main.c(534): warning:  #223-D: function "ReadAdc" declared implicitly
+src\Main.c(537): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(542): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(544): warning:  #223-D: function "Buzzer_Stop" declared implicitly
+src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
+src\Main.c - 0 Error(s), 12 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=26880 RO-data=292564 RW-data=2304124 ZI-data=768188  
+FromELF: creating hex file...
+User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
+"TQ2440.axf" - 0 Error(s), 0 Warning(s).
+compiling Touchpanel.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(272): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c - 0 Error(s), 12 Warning(s).
+Build target 'Target 1'
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Main.c(489): warning:  #61-D: integer operation result is out of range
+src\Main.c(492): warning:  #177-D: label "fail" was declared but never referenced
+src\Main.c(500): warning:  #223-D: function "Paint_Bmp" declared implicitly
+src\Main.c(534): warning:  #223-D: function "ReadAdc" declared implicitly
+src\Main.c(537): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(542): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(544): warning:  #223-D: function "Buzzer_Stop" declared implicitly
+src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
+linking...
+Program Size: Code=26920 RO-data=292564 RW-data=2304124 ZI-data=768188  
+FromELF: creating hex file...
+User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
+"TQ2440.axf" - 0 Error(s), 12 Warning(s).
+Build target 'Target 1'
+compiling Touchpanel.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(272): warning:  #61-D: integer operation result is out of range
+linking...
+Program Size: Code=26920 RO-data=292564 RW-data=2304124 ZI-data=768188  
+FromELF: creating hex file...
+User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
+"TQ2440.axf" - 0 Error(s), 12 Warning(s).
+Build target 'Target 1'
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Main.c(489): warning:  #61-D: integer operation result is out of range
+src\Main.c(492): warning:  #177-D: label "fail" was declared but never referenced
+src\Main.c(500): warning:  #223-D: function "Paint_Bmp" declared implicitly
+src\Main.c(534): warning:  #223-D: function "ReadAdc" declared implicitly
+src\Main.c(537): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(542): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(544): warning:  #223-D: function "Buzzer_Stop" declared implicitly
+src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
+compiling Touchpanel.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(273): warning:  #61-D: integer operation result is out of range
+linking...
+Program Size: Code=26928 RO-data=292564 RW-data=2304124 ZI-data=768188  
+FromELF: creating hex file...
+User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
+"TQ2440.axf" - 0 Error(s), 24 Warning(s).
+Build target 'Target 1'
+compiling nand.c...
+.\inc\def.h(125): warning:  #21-D: type qualifiers are meaningless in this declaration
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\nand.c(36): warning:  #550-D: variable "pMID" was set but never used
+src\nand.c(38): warning:  #550-D: variable "nBuff" was set but never used
+src\nand.c(39): warning:  #550-D: variable "n4thcycle" was set but never used
+compiling 2440lib.c...
+.\inc\def.h(125): warning:  #21-D: type qualifiers are meaningless in this declaration
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling Adc.c...
+.\inc\def.h(125): warning:  #21-D: type qualifiers are meaningless in this declaration
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling keyscan.c...
+.\inc\def.h(125): warning:  #21-D: type qualifiers are meaningless in this declaration
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling LCD_TFT.c...
+.\inc\def.h(125): warning:  #21-D: type qualifiers are meaningless in this declaration
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling Main.c...
+.\inc\def.h(125): warning:  #21-D: type qualifiers are meaningless in this declaration
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Main.c(489): warning:  #61-D: integer operation result is out of range
+src\Main.c(492): warning:  #177-D: label "fail" was declared but never referenced
+src\Main.c(500): warning:  #223-D: function "Paint_Bmp" declared implicitly
+src\Main.c(534): warning:  #223-D: function "ReadAdc" declared implicitly
+src\Main.c(537): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(542): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(544): warning:  #223-D: function "Buzzer_Stop" declared implicitly
+src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
+compiling memtest.c...
+.\inc\def.h(125): warning:  #21-D: type qualifiers are meaningless in this declaration
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling mmu.c...
+.\inc\def.h(125): warning:  #21-D: type qualifiers are meaningless in this declaration
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling profile.c...
+.\inc\def.h(125): warning:  #21-D: type qualifiers are meaningless in this declaration
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\profile.c(36): warning:  #177-D: variable "divider" was declared but never referenced
+compiling RTC.c...
+.\inc\def.h(125): warning:  #21-D: type qualifiers are meaningless in this declaration
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling SD_MMC.c...
+.\inc\def.h(125): warning:  #21-D: type qualifiers are meaningless in this declaration
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling Touchpanel.c...
+.\inc\def.h(125): warning:  #21-D: type qualifiers are meaningless in this declaration
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(273): warning:  #61-D: integer operation result is out of range
+linking...
+Program Size: Code=26928 RO-data=292564 RW-data=2304124 ZI-data=768188  
+FromELF: creating hex file...
+User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
+"TQ2440.axf" - 0 Error(s), 80 Warning(s).
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Main.c(489): warning:  #61-D: integer operation result is out of range
+src\Main.c(492): warning:  #177-D: label "fail" was declared but never referenced
+src\Main.c(500): warning:  #223-D: function "Paint_Bmp" declared implicitly
+src\Main.c(534): warning:  #223-D: function "ReadAdc" declared implicitly
+src\Main.c(537): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(542): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(544): warning:  #223-D: function "Buzzer_Stop" declared implicitly
+src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
+src\Main.c - 0 Error(s), 12 Warning(s).
+Build target 'Target 1'
+compiling nand.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\nand.c(36): warning:  #550-D: variable "pMID" was set but never used
+src\nand.c(38): warning:  #550-D: variable "nBuff" was set but never used
+src\nand.c(39): warning:  #550-D: variable "n4thcycle" was set but never used
+compiling 2440lib.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling Adc.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling keyscan.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling LCD_TFT.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling memtest.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling mmu.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling profile.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\profile.c(36): warning:  #177-D: variable "divider" was declared but never referenced
+compiling RTC.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling SD_MMC.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling Touchpanel.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(273): warning:  #61-D: integer operation result is out of range
+linking...
+Program Size: Code=26928 RO-data=292564 RW-data=2304124 ZI-data=768188  
+FromELF: creating hex file...
+User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
+"TQ2440.axf" - 0 Error(s), 56 Warning(s).
+Build target 'Target 1'
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Main.c(489): warning:  #61-D: integer operation result is out of range
+src\Main.c(492): warning:  #177-D: label "fail" was declared but never referenced
+src\Main.c(500): warning:  #223-D: function "Paint_Bmp" declared implicitly
+src\Main.c(534): warning:  #223-D: function "ReadAdc" declared implicitly
+src\Main.c(537): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(542): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(544): warning:  #223-D: function "Buzzer_Stop" declared implicitly
+src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
+linking...
+Program Size: Code=26932 RO-data=292564 RW-data=2304124 ZI-data=768192  
 FromELF: creating hex file...
 User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
 "TQ2440.axf" - 0 Error(s), 12 Warning(s).
@@ -1491,64 +555,211 @@ compiling Main.c...
 .\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
 .\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(465): warning:  #61-D: integer operation result is out of range
-src\Main.c(468): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(476): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(486): error:  #77-D: this declaration has no storage class or type specifier
-src\Main.c(486): error:  #65: expected a ";"
-src\Main.c(505): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+src\Main.c(489): warning:  #61-D: integer operation result is out of range
+src\Main.c(492): warning:  #177-D: label "fail" was declared but never referenced
+src\Main.c(500): warning:  #223-D: function "Paint_Bmp" declared implicitly
+src\Main.c(534): warning:  #223-D: function "ReadAdc" declared implicitly
+src\Main.c(537): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(542): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(544): warning:  #223-D: function "Buzzer_Stop" declared implicitly
 src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-src\Main.c - 2 Error(s), 9 Warning(s).
+src\Main.c - 0 Error(s), 12 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=26932 RO-data=292564 RW-data=2304124 ZI-data=768192  
+FromELF: creating hex file...
+User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
+"TQ2440.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
 compiling Main.c...
 .\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
 .\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(465): warning:  #61-D: integer operation result is out of range
-src\Main.c(468): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(476): warning:  #223-D: function "Paint_Bmp" declared implicitly
+src\Main.c(490): warning:  #61-D: integer operation result is out of range
+src\Main.c(493): warning:  #177-D: label "fail" was declared but never referenced
+src\Main.c(501): warning:  #223-D: function "Paint_Bmp" declared implicitly
+src\Main.c(535): warning:  #223-D: function "ReadAdc" declared implicitly
+src\Main.c(538): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(543): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(545): warning:  #223-D: function "Buzzer_Stop" declared implicitly
 src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-src\Main.c - 0 Error(s), 8 Warning(s).
+linking...
+Program Size: Code=26944 RO-data=292564 RW-data=2304124 ZI-data=768188  
+FromELF: creating hex file...
+User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
+"TQ2440.axf" - 0 Error(s), 12 Warning(s).
+Build target 'Target 1'
 compiling Main.c...
 .\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
 .\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(465): warning:  #61-D: integer operation result is out of range
-src\Main.c(468): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(476): warning:  #223-D: function "Paint_Bmp" declared implicitly
-src\Main.c(486): error:  #77-D: this declaration has no storage class or type specifier
-src\Main.c(486): error:  #65: expected a ";"
-src\Main.c(505): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+src\Main.c(490): warning:  #61-D: integer operation result is out of range
+src\Main.c(493): warning:  #177-D: label "fail" was declared but never referenced
+src\Main.c(501): warning:  #223-D: function "Paint_Bmp" declared implicitly
+src\Main.c(535): warning:  #223-D: function "ReadAdc" declared implicitly
+src\Main.c(538): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(543): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(545): warning:  #223-D: function "Buzzer_Stop" declared implicitly
 src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-src\Main.c - 2 Error(s), 9 Warning(s).
+linking...
+Program Size: Code=26944 RO-data=292564 RW-data=2304124 ZI-data=768188  
+FromELF: creating hex file...
+User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
+"TQ2440.axf" - 0 Error(s), 12 Warning(s).
 compiling Main.c...
 .\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
 .\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(465): warning:  #61-D: integer operation result is out of range
-src\Main.c(468): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(476): warning:  #223-D: function "Paint_Bmp" declared implicitly
+src\Main.c(490): warning:  #61-D: integer operation result is out of range
+src\Main.c(493): warning:  #177-D: label "fail" was declared but never referenced
+src\Main.c(501): warning:  #223-D: function "Paint_Bmp" declared implicitly
+src\Main.c(535): warning:  #223-D: function "ReadAdc" declared implicitly
+src\Main.c(538): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(543): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(545): warning:  #223-D: function "Buzzer_Stop" declared implicitly
 src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-src\Main.c - 0 Error(s), 8 Warning(s).
+src\Main.c - 0 Error(s), 12 Warning(s).
 compiling Main.c...
 .\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
 .\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(468): warning:  #61-D: integer operation result is out of range
-src\Main.c(471): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(479): warning:  #223-D: function "Paint_Bmp" declared implicitly
+src\Main.c(476): warning:  #61-D: integer operation result is out of range
+src\Main.c(479): warning:  #177-D: label "fail" was declared but never referenced
+src\Main.c(487): warning:  #223-D: function "Paint_Bmp" declared implicitly
+src\Main.c(532): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(538): warning:  #223-D: function "ReadAdc" declared implicitly
+src\Main.c(541): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(546): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(548): warning:  #223-D: function "Buzzer_Stop" declared implicitly
 src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-src\Main.c - 0 Error(s), 8 Warning(s).
+src\Main.c - 0 Error(s), 13 Warning(s).
 compiling Main.c...
 .\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
 .\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
 .\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
-src\Main.c(470): warning:  #61-D: integer operation result is out of range
-src\Main.c(473): warning:  #177-D: label "fail" was declared but never referenced
-src\Main.c(481): warning:  #223-D: function "Paint_Bmp" declared implicitly
+src\Main.c(380): warning:  #223-D: function "Buzzer_Stop" declared implicitly
+src\Main.c(391): error:  #127: expected a statement
+src\Main.c(486): warning:  #61-D: integer operation result is out of range
+src\Main.c(489): warning:  #177-D: label "fail" was declared but never referenced
+src\Main.c(497): warning:  #223-D: function "Paint_Bmp" declared implicitly
+src\Main.c(546): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(553): warning:  #223-D: function "ReadAdc" declared implicitly
+src\Main.c(556): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(561): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(563): warning:  #223-D: function "Buzzer_Stop" declared implicitly
 src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
-src\Main.c - 0 Error(s), 8 Warning(s).
+src\Main.c - 1 Error(s), 14 Warning(s).
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Main.c(380): warning:  #223-D: function "Buzzer_Stop" declared implicitly
+src\Main.c(486): warning:  #61-D: integer operation result is out of range
+src\Main.c(489): warning:  #177-D: label "fail" was declared but never referenced
+src\Main.c(497): warning:  #223-D: function "Paint_Bmp" declared implicitly
+src\Main.c(546): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(553): warning:  #223-D: function "ReadAdc" declared implicitly
+src\Main.c(556): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(561): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(563): warning:  #223-D: function "Buzzer_Stop" declared implicitly
+src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
+src\Main.c - 0 Error(s), 14 Warning(s).
+compiling Main.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Main.c(380): warning:  #223-D: function "Buzzer_Stop" declared implicitly
+src\Main.c(387): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(392): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(397): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(404): warning:  #111-D: statement is unreachable
+src\Main.c(501): warning:  #61-D: integer operation result is out of range
+src\Main.c(504): warning:  #177-D: label "fail" was declared but never referenced
+src\Main.c(512): warning:  #223-D: function "Paint_Bmp" declared implicitly
+src\Main.c(561): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(568): warning:  #223-D: function "ReadAdc" declared implicitly
+src\Main.c(571): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(576): warning:  #223-D: function "Buzzer_Freq_Set" declared implicitly
+src\Main.c(578): warning:  #223-D: function "Buzzer_Stop" declared implicitly
+src\Main.c(67): warning:  #550-D: variable "cpu_freq" was set but never used
+src\Main.c - 0 Error(s), 18 Warning(s).
+Build target 'Target 1'
+compiling nand.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\nand.c(36): warning:  #550-D: variable "pMID" was set but never used
+src\nand.c(38): warning:  #550-D: variable "nBuff" was set but never used
+src\nand.c(39): warning:  #550-D: variable "n4thcycle" was set but never used
+compiling 2440lib.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling Adc.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling keyscan.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling LCD_TFT.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling memtest.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling mmu.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling profile.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\profile.c(36): warning:  #177-D: variable "divider" was declared but never referenced
+compiling RTC.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling SD_MMC.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+compiling Touchpanel.c...
+.\inc\2440addr.h(677): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(677): warning:  #550-D: variable "i" was set but never used
+.\inc\2440addr.h(685): warning:  #260-D: explicit type is missing ("int" assumed)
+.\inc\2440addr.h(685): warning:  #550-D: variable "i" was set but never used
+src\Touchpanel.c(109): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(116): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(144): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(144): warning:  #68-D: integer conversion resulted in a change of sign
+src\Touchpanel.c(154): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(157): warning:  #61-D: integer operation result is out of range
+src\Touchpanel.c(273): warning:  #61-D: integer operation result is out of range
+linking...
+Program Size: Code=26552 RO-data=292564 RW-data=2304124 ZI-data=768188  
+FromELF: creating hex file...
+User command #1: fromelf.exe --bin -o TQ2440.bin TQ2440.axf
+"TQ2440.axf" - 0 Error(s), 56 Warning(s).
