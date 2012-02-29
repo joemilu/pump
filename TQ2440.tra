@@ -26,7 +26,7 @@
 ### ADS-LD Output File: 'TQ2440.axf'
 ### ADS-LD Command File: 'TQ2440.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile 'TQ2440.lnp', Handle=0x000004F0
+### Creating CmdFile 'TQ2440.lnp', Handle=0x000003AC
 ### Writing '.lnp' file
 ### ADS-LD Command file 'TQ2440.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.

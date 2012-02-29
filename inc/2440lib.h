@@ -53,6 +53,8 @@ void Timer_Start(int divider);    //Watchdog Timer is used.
 int  Timer_Stop(void);            //Watchdog Timer is used.
 
 void Led_Display(int data);
+void Buzzer_Freq_Set( U32 freq );
+void Buzzer_Stop( void );
 void Beep(U32 freq, U32 ms) ;
 void BUZZER_PWM_Test( void );
 void ChangeMPllValue(int m,int p,int s);

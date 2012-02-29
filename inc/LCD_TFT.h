@@ -1,6 +1,8 @@
 /**************************************************************
 The initial and control for TFT LCD
 **************************************************************/
+#include "def.h"
+
 
 #define LCDW35			1		// 天嵌3.5寸屏(320X240)或东华3.5寸屏或奇美3.5寸屏
 #define LCDS35			2		// 三星3.5寸屏(320X240)
@@ -252,6 +254,11 @@ void Lcd_PowerEnable(int ,int );
 
 void Lcd_Init(void);
 
+void Paint_Bmp(int x0,int y0,int h,int l,unsigned char bmp[]);
+
+void PutPixel(U32 x,U32 y, U32 c );
+
+void OUT_NUM(unsigned int x,unsigned int y,unsigned long Num,unsigned int c,unsigned int bk_c,unsigned int st);
 
 #if((LCD_Type == LCDW35) || (LCD_Type == LCDS35))	// 3.5寸屏
 	extern unsigned char TQ_LOGO_320240[];//自定义的图片

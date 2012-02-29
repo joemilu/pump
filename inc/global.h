@@ -4,7 +4,7 @@ extern 	struct SYSTEM_STAT sys_stat;
 extern	struct THERAPY_CONFIG theo_conf;
 extern	struct TOUCH_STAT touch_stat;
 extern	struct BUTTOMS buttoms;
-extern	struct DATA_STAT rawdata;
+extern	struct DATA_STAT rawdata,filtereddata;
 extern	struct AD_STAT ad_stat;
 extern	struct HEAT_STAT heart_stat;
 extern	struct PUMP_STAT pump_stat;

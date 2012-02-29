@@ -15,6 +15,7 @@
 #include "profile.h"
 #include "memtest.h"
 #include "data.h"
+#include "LCD_TFT.h"
 
 extern char Image$$ER_ROM1$$RO$$Limit[];
 extern char Image$$ER_ROM1$$RO$$Base[];
@@ -143,6 +144,8 @@ extern void __irq AdcTsAuto(void);
 void starttimer0(void);
 void starttimer1(void);
 void starttimer2(void);
+void filter(void);
+extern int ReadAdc(int ch);
 
 volatile struct	SYSTEM_STAT sys_stat;
 volatile struct	THERAPY_CONFIG theo_conf;
@@ -157,6 +160,32 @@ volatile struct	PUMP_STAT pump_stat;
 extern unsigned char TQ_LOGO_800480[];
 extern unsigned char Presspic[];
 extern unsigned char Setpic[];
+
+unsigned int buffer_raw[BUFFER_SZ];
+float buffer_filtered[BUFFER_SZ];
+static double Filter[FILTER_SZ]={0.0505,0.0027,0.0505,-1.5013,0.6051};
+
+
+struct buffer_raw_index{
+uint* start;
+uint* end;
+//uint* now;
+int now;
+}buffer_raw_index;
+
+struct buffer_filter_index{
+float* start;
+float* end;
+//uint* now;
+int now;
+}buffer_filtered_inedx;
+
+struct Flag{
+uint Fini ;//采用初始化
+uint Fini_ok ;
+uint Restcnt;
+uint GotPoint;//获取动脉瓣关闭点
+}Fg;
 
 void Main(void)
 {
@@ -371,8 +400,108 @@ void Clk1_Disable(void)
 
 void __irq Timer0_ISR(void) 
 {
-	read();
+//	read();
+	static int count1 = 0;
+	static int count2 = 0;
+//	static int count3 = 0;
+//采样原始数据
+	uint temp;
+	temp = read();
+	buffer_raw[buffer_raw_index.now++] = temp;
+	if(buffer_raw_index.now == BUFFER_SZ)
+	{
+		buffer_raw_index.now = 0;
+	}
+//滤波
+	filter();
+	temp = buffer_filtered[(buffer_filtered_inedx.now+BUFFER_SZ-1)%BUFFER_SZ];
+	if(Fg.Fini)
+	{
+		if(count2++ == INI_SAMPLE_PERIOD)
+		{
+			count2 = 0;
+			count1 = 0;
+			Fg.Fini_ok = 1;
+		}
+	}
+	if(Fg.Restcnt)
+	{
+		Fg.Restcnt = 0;
+		count1 = 0;
+	}
+//采样原始数据
+	if(filtereddata.useful == 1)
+	{
+//预处理
+		heart_stat.delt[0] = heart_stat.delt[1];
+		heart_stat.delt[1] = buffer_filtered[(buffer_filtered_inedx.now+BUFFER_SZ-1)%BUFFER_SZ]-buffer_filtered[(buffer_filtered_inedx.now+BUFFER_SZ-4)%BUFFER_SZ];		 
+		if(heart_stat.delt[0]*heart_stat.delt[1] <0)
+		{
+//			if(count3 == 0)
+//			{
+//				count3++;
+	//获取极值
+	//获取极大值
+			if(temp >heart_stat.Ave && (uint)count1 > (heart_stat.Period/2)&& heart_stat.updown == BOTTOM)
+				{
+					heart_stat.Max = temp;
+					heart_stat.updown = TOP;
+					//if(Tz.updown == DOWN)
+					//	Tz.updown = UP;
+					//else
+					//	Tz.updown = DOWN;
+	//获取周期
+					heart_stat.Period = count1;
+	//重新开始计时
+					count1 = 0 ;
+					Fg.GotPoint = 0;
+				}
+	//获取极小值
+				else if((uint)count1 > (heart_stat.ClosePoint+heart_stat.RelaxPeriod*0.66) && (uint)count1 > (heart_stat.Period*0.5)&& heart_stat.delt[1] > 0 && heart_stat.updown == HCLOSED)
+				{
+					heart_stat.Min =temp;
+	//获取平均值
+					heart_stat.Ave = (heart_stat.Max+heart_stat.Min)/2;
+					heart_stat.updown = BOTTOM;
+					heart_stat.RelaxPeriod = count1 - heart_stat.ClosePoint;
+				}
 
+//			}
+//			count1++;
+		}else
+		{
+	//特征判断
+			if(!Fg.GotPoint && heart_stat.updown == TOP && abs(heart_stat.delt[1]) < YULIANG && count1 > 10)
+			{
+				Fg.GotPoint = 1;
+				heart_stat.updown = HCLOSED;
+				heart_stat.ClosePoint = count1;
+			}
+			count1 = count1+1;
+//			count3 = 0;
+		}	
+	}else if(filtereddata.useful == 0)
+	{
+		count1 = count1+1;
+		if(count1 == SAMPLE_RATE)
+		{
+			filtereddata.useful = 1;
+			count1 = 0;
+		}else
+		{
+			if(temp > heart_stat.Max)
+			{
+				heart_stat.Max = temp;	
+			}else if(temp <heart_stat.Min)
+				heart_stat.Min = temp,heart_stat.Ave = (heart_stat.Max+heart_stat.Min)/2;			
+		}
+	}
+/*	if(Tz.updown ==TOP)
+		fprintf(Fr.fp,"%d  \n",100);
+	else if(Tz.updown == HCLOSED)
+		fprintf(Fr.fp,"%d  \n",50);
+	else 
+		fprintf(Fr.fp,"%d  \n",0);	*/
 }
 
 void __irq Timer2_ISR(void)
@@ -381,28 +510,31 @@ void __irq Timer2_ISR(void)
 	DisableIrq(BIT_TIMER2);
 	ClearPending(BIT_TIMER2);
 	rTCON &= ~0x001000;// 关定时器
-	if(pump_stat.step++<4)
-	{	
-		rTCNTB2 = pump_stat.period *(pump_stat.step);
-		Buzzer_Freq_Set(pump_stat.pwm_rate * pump_stat.step);
-	}	
-	else if(pump_stat.step == 4)
+	if(pump_stat.stat == STAT_ON)
 	{
-		rTCNTB2 = pump_stat.period *14;
-		Buzzer_Freq_Set(pump_stat.pwm_rate * pump_stat.step);
-	}
-	else if(pump_stat.step <8)
-	{
-		rTCNTB2 = pump_stat.period *(8 - pump_stat.step);  
-		Buzzer_Freq_Set(pump_stat.pwm_rate * (8 - pump_stat.step));
-	}
-	else if(pump_stat.step == 8);//停止并且修正；
-	{
-		rTCON &= ~0x001000;// 关定时器
-		return;
-	}
-	rTCON |= 0x003000;// 更新tcnt,开时器	
-	EnableIrq(BIT_TIMER2);	 			
+		if(pump_stat.step++<4)
+		{	
+			rTCNTB2 = pump_stat.period *(pump_stat.step);
+			Buzzer_Freq_Set(pump_stat.pwm_rate * pump_stat.step);
+		}	
+		else if(pump_stat.step == 4)
+		{
+			rTCNTB2 = pump_stat.period *14;
+			Buzzer_Freq_Set(pump_stat.pwm_rate * pump_stat.step);
+		}
+		else if(pump_stat.step <8)
+		{
+			rTCNTB2 = pump_stat.period *(8 - pump_stat.step);  
+			Buzzer_Freq_Set(pump_stat.pwm_rate * (8 - pump_stat.step));
+		}
+		else if(pump_stat.step == 8);//停止并且修正；
+		{
+			rTCON &= ~0x001000;// 关定时器
+			return;
+		}
+		rTCON |= 0x003000;// 更新tcnt,开时器	
+		EnableIrq(BIT_TIMER2);
+	}	 			
 }
 
 uint read()
@@ -577,4 +709,46 @@ void Auto_zero(void)
 	}
 	Buzzer_Stop();
 //	Uart_Printf( "Return to zero!" );	
+}
+
+int init_sample()
+{
+//	Fg.Fini = 1;
+//	resetcnt();
+	heart_stat.Ave = 0;
+	heart_stat.Max = 0;
+	heart_stat.Min = 65535;
+	filtereddata.useful = 0;
+	heart_stat.updown = 0;
+	heart_stat.Period = heart_stat.RelaxPeriod = 0;
+//	startsample();
+	starttimer0();
+//	while(!Fg.Fini_ok)
+//		sample();
+//	stopsample();
+	return SUCCESS;
+}
+
+void filter()
+{
+	uint i;
+	int index = buffer_raw_index.now;
+	double temp = 0;
+	index = index ? index:(index + BUFFER_SZ);
+	for(i=0;i<FILTER_SZ_1;i++)
+	{
+		index = index - 1;
+		index = (index < 0)?(index + BUFFER_SZ):(index);
+		temp+=buffer_raw[index]*Filter[i];
+	}
+	index = buffer_filtered_inedx.now;
+	for(i=0;i<(FILTER_SZ-FILTER_SZ_1);i++)
+	{
+		index = index - 1;
+		index = (index < 0)?(index + BUFFER_SZ):(index);
+		temp-=buffer_filtered[index]*Filter[i+FILTER_SZ_1];
+	}
+	buffer_filtered[buffer_filtered_inedx.now++] = temp;
+	if(0 == buffer_filtered_inedx.now%BUFFER_SZ)
+		buffer_filtered_inedx.now = 0;
 }

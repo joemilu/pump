@@ -25,7 +25,7 @@
     <ToolsetNumber>0x4</ToolsetNumber>
     <ToolsetName>ARM-ADS</ToolsetName>
     <TargetOption>
-      <CLKADS>50000000</CLKADS>
+      <CLKADS>12000000</CLKADS>
       <OPTTT>
         <gFlags>1</gFlags>
         <BeepAtEnd>1</BeepAtEnd>
@@ -283,10 +283,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>5</ColumnNumber>
+      <ColumnNumber>30</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>18</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\src\LCD_TFT.c</PathWithFileName>
       <FilenameWithoutPath>LCD_TFT.c</FilenameWithoutPath>
@@ -297,10 +297,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>80</ColumnNumber>
+      <ColumnNumber>8</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>229</TopLine>
-      <CurrentLine>229</CurrentLine>
+      <TopLine>356</TopLine>
+      <CurrentLine>370</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\src\Main.c</PathWithFileName>
       <FilenameWithoutPath>Main.c</FilenameWithoutPath>
@@ -395,10 +395,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>111</ColumnNumber>
+      <ColumnNumber>5</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>225</TopLine>
+      <CurrentLine>255</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\src\Touchpanel.c</PathWithFileName>
       <FilenameWithoutPath>Touchpanel.c</FilenameWithoutPath>
@@ -411,11 +411,25 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>1</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\src\TQ_LOGO.c</PathWithFileName>
       <FilenameWithoutPath>TQ_LOGO.c</FilenameWithoutPath>
+    </File>
+    <File>
+      <GroupNumber>1</GroupNumber>
+      <FileNumber>0</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>0</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\src\Font_Libs.c</PathWithFileName>
+      <FilenameWithoutPath>Font_Libs.c</FilenameWithoutPath>
     </File>
   </Group>
 
@@ -687,9 +701,9 @@
       <Documents>
         <Doc>
           <Name>.\src\Main.c</Name>
-          <ColumnNumber>80</ColumnNumber>
-          <TopLine>229</TopLine>
-          <CurrentLine>229</CurrentLine>
+          <ColumnNumber>8</ColumnNumber>
+          <TopLine>356</TopLine>
+          <CurrentLine>370</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\inc\2440addr.h</Name>
@@ -699,15 +713,15 @@
         </Doc>
         <Doc>
           <Name>.\inc\def.h</Name>
-          <ColumnNumber>14</ColumnNumber>
-          <TopLine>62</TopLine>
-          <CurrentLine>87</CurrentLine>
+          <ColumnNumber>8</ColumnNumber>
+          <TopLine>107</TopLine>
+          <CurrentLine>129</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\inc\global.h</Name>
-          <ColumnNumber>27</ColumnNumber>
+          <ColumnNumber>0</ColumnNumber>
           <TopLine>1</TopLine>
-          <CurrentLine>7</CurrentLine>
+          <CurrentLine>1</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\src\2440lib.c</Name>
@@ -720,6 +734,18 @@
           <ColumnNumber>85</ColumnNumber>
           <TopLine>1</TopLine>
           <CurrentLine>1</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\src\LCD_TFT.c</Name>
+          <ColumnNumber>30</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>18</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\src\Touchpanel.c</Name>
+          <ColumnNumber>5</ColumnNumber>
+          <TopLine>225</TopLine>
+          <CurrentLine>255</CurrentLine>
         </Doc>
       </Documents>
     </MDIGroup>

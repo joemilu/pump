@@ -142,6 +142,7 @@ struct BUTTOMS{
 
 struct DATA_STAT{
 	uint index;
+	uint useful;//数据是够有效
 };
 
 struct AD_STAT{
