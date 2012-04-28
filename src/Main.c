@@ -44,6 +44,7 @@ extern void Test_Adc(void) ;
 extern void KeyScan_Test(void) ;
 extern void RTC_Display(void) ;
 extern void Test_SDI(void) ;
+extern void OUT_NUM(unsigned int x,unsigned int y,unsigned long Num,unsigned int c,unsigned int bk_c,unsigned int st);
 
 
 volatile U32 downloadAddress;
@@ -145,10 +146,11 @@ void starttimer0(void);
 void starttimer1(void);
 void starttimer2(void);
 void filter(void);
+void ParaSetDisp(void);
 extern int ReadAdc(int ch);
 
 volatile struct	SYSTEM_STAT sys_stat;
-volatile struct	THERAPY_CONFIG theo_conf;
+volatile struct	THERAPY_CONFIG theo_conf,para_temp1;
 volatile struct	TOUCH_STAT touch_stat;
 volatile struct	BUTTOMS buttoms;
 volatile struct	DATA_STAT rawdata;
@@ -302,8 +304,7 @@ void Main(void)
 							{
 								buttoms.back = B_OFF;
 								sys_stat.interface = 0;
-								load_interface(sys_stat.interface);	
-									
+								load_interface(sys_stat.interface);									    	
 							}							
 						}
 						break;
@@ -311,9 +312,82 @@ void Main(void)
 							if(buttoms.back)
 							{
 								buttoms.back = B_OFF;
+								theo_conf.heart_beat=para_temp1.heart_beat;
+								theo_conf.volume=para_temp1.volume;
+								theo_conf.compress_ratio=para_temp1.compress_ratio;
 								sys_stat.interface = 0;
 								load_interface(sys_stat.interface);										
 							}
+							else if(buttoms.p1000)
+							{
+								buttoms.p1000=B_OFF;
+								if(para_temp1.volume<=5000)
+									para_temp1.volume+=1000;
+								ParaSetDisp();
+							}
+							else if(buttoms.m1000)
+							{
+								buttoms.m1000=B_OFF;
+								if(para_temp1.volume>=2000)
+									para_temp1.volume-=1000;
+								ParaSetDisp();
+							}
+							else if(buttoms.p100)
+							{
+							 	buttoms.p100=B_OFF;
+								if(para_temp1.volume<=5900)
+									para_temp1.volume+=100;
+								ParaSetDisp();
+							}
+							else if(buttoms.m100)
+							{
+								buttoms.m100=B_OFF;
+								if(para_temp1.volume>=1100)
+									para_temp1.volume-=100;
+								ParaSetDisp();							
+							}
+							else if(buttoms.p10)
+							{
+							 	buttoms.p10=B_OFF;
+								if(para_temp1.heart_beat<=190)
+									para_temp1.heart_beat+=10;
+								ParaSetDisp();
+							}
+							else if(buttoms.m10)
+							{
+							 	buttoms.m10=B_OFF;
+								if(para_temp1.heart_beat>=11)
+									para_temp1.heart_beat-=10;
+								ParaSetDisp();
+							}
+							else if(buttoms.p1)
+							{
+							 	buttoms.p1=B_OFF;
+								if(para_temp1.heart_beat<=199)
+									para_temp1.heart_beat+=1;
+								ParaSetDisp();
+							}
+							else if(buttoms.m1)
+							{
+							 	buttoms.m1=B_OFF;
+								if(para_temp1.heart_beat>=2)
+									para_temp1.heart_beat-=1;
+								ParaSetDisp();
+							}
+							else if(buttoms.p01)
+							{
+							 	buttoms.p01=B_OFF;
+								if(para_temp1.compress_ratio<2)
+									para_temp1.compress_ratio+=0.1;
+								ParaSetDisp();
+							}
+							else if(buttoms.m01)
+							{
+							 	buttoms.m01=B_OFF;
+								if(para_temp1.compress_ratio>1)
+									para_temp1.compress_ratio-=0.1;
+								ParaSetDisp();
+							} 
 						}
 						break;
 				 default:break;
@@ -641,11 +715,29 @@ void load_interface(int n)
 {
 	switch(n)
 	{
-		case 0:	Paint_Bmp(0, 0, 800, 480, TQ_LOGO_800480);
+		case 0:	{
+		        	int ratio_print=theo_conf.compress_ratio*10;
+					Paint_Bmp(0, 0, 800, 480, TQ_LOGO_800480);
+					if(theo_conf.heart_beat<10)
+						OUT_NUM(125,125,theo_conf.heart_beat,0,0xffff,0);
+					else if((theo_conf.heart_beat>=10)&&(theo_conf.heart_beat<100))
+						OUT_NUM(115,125,theo_conf.heart_beat,0,0xffff,0);
+					else
+						OUT_NUM(105,125,theo_conf.heart_beat,0,0xffff,0);
+					OUT_NUM(615,125,theo_conf.volume,0,0xffff,0);
+					OUT_NUM(460,125,ratio_print,0,0xffff,0);
+					Glib_FilledRectangle(481,163,484,167,0);
+				}
 				break;
 		case 1:	Paint_Bmp(0, 0, 800, 480, Presspic);
 				break;
-		case 2: Paint_Bmp(0, 0, 800, 480, Setpic);
+		case 2: {
+					Paint_Bmp(0, 0, 800, 480, Setpic);					
+					para_temp1.heart_beat=theo_conf.heart_beat;
+					para_temp1.volume=theo_conf.volume;
+					para_temp1.compress_ratio=theo_conf.compress_ratio;
+					ParaSetDisp();
+				}
 				break;
 		default:break;
 	}
@@ -751,4 +843,40 @@ void filter()
 	buffer_filtered[buffer_filtered_inedx.now++] = temp;
 	if(0 == buffer_filtered_inedx.now%BUFFER_SZ)
 		buffer_filtered_inedx.now = 0;
+}
+
+void resetFlags()
+{
+	Fg.Fini = 0;
+	Fg.Fini_ok = 0;
+	Fg.GotPoint = 0;
+	Fg.Restcnt = 0;
+}
+
+void ParaSetDisp(void)
+{	
+	unsigned int x1=125;
+	unsigned int x2=360;
+	unsigned int x3=570;
+	unsigned int y=150;
+	unsigned int c=0;
+	unsigned int bk_c=0xffff;
+	int ratio_print;
+	ratio_print=para_temp1.compress_ratio*10;
+	Glib_FilledRectangle(330,150,445,200,0xffff);
+	if(para_temp1.heart_beat<10)
+	{
+		OUT_NUM(x2+10,y,para_temp1.heart_beat,c,bk_c,0);
+	}
+	else if((para_temp1.heart_beat>=10)&&(para_temp1.heart_beat<100))
+	{	
+		OUT_NUM(x2,y,para_temp1.heart_beat,c,bk_c,0);
+	}
+	else
+	{
+		OUT_NUM(x2-10,y,para_temp1.heart_beat,c,bk_c,0);
+	}
+	OUT_NUM(x1,y,para_temp1.volume,c,bk_c,0);
+	OUT_NUM(x3,y,ratio_print,c,bk_c,0);
+	Glib_FilledRectangle(591,188,594,192,0);
 }

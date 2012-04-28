@@ -105,6 +105,7 @@ typedef void *PVOID;
 #define STAT_ON 2
 #define TIME 1 //时间换算单位 采用时间——>定时器时间
 
+
 struct SYSTEM_STAT{
 	uint  interface;			//所处界面
 	uint refresh;
@@ -169,8 +170,6 @@ struct PUMP_STAT{
 	uint stat;
 	uint pos;
 	uint period;//定时器时间
-};
-		
+};		
 
 #endif /*__DEF_H__*/
-
