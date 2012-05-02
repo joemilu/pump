@@ -167,6 +167,9 @@ unsigned int buffer_raw[BUFFER_SZ];
 float buffer_filtered[BUFFER_SZ];
 static double Filter[FILTER_SZ]={0.0505,0.0027,0.0505,-1.5013,0.6051};
 
+unsigned int Num_Color1;
+unsigned int Num_Color2;
+unsigned int Num_Color3;
 
 struct buffer_raw_index{
 uint* start;
@@ -321,71 +324,146 @@ void Main(void)
 							else if(buttoms.p1000)
 							{
 								buttoms.p1000=B_OFF;
-								if(para_temp1.volume<=5000)
+								if(para_temp1.volume<5000)
+								{	
 									para_temp1.volume+=1000;
+									Num_Color1=black;
+								}
+								else
+								{
+									para_temp1.volume=6000;
+									Num_Color1=red;
+								}
 								ParaSetDisp();
 							}
 							else if(buttoms.m1000)
 							{
 								buttoms.m1000=B_OFF;
-								if(para_temp1.volume>=2000)
+								if(para_temp1.volume>2000)
+								{
 									para_temp1.volume-=1000;
+									Num_Color1=black;
+								}
+								else
+								{
+									para_temp1.volume=1000;
+									Num_Color1=red;
+								}
 								ParaSetDisp();
 							}
 							else if(buttoms.p100)
 							{
 							 	buttoms.p100=B_OFF;
-								if(para_temp1.volume<=5900)
+								if(para_temp1.volume<5900)
+								{
 									para_temp1.volume+=100;
+									Num_Color1=black;
+								}
+								else
+								{
+									para_temp1.volume=6000;
+									Num_Color1=red;	
+								}
 								ParaSetDisp();
 							}
 							else if(buttoms.m100)
 							{
 								buttoms.m100=B_OFF;
-								if(para_temp1.volume>=1100)
+								if(para_temp1.volume>1100)
+								{	
 									para_temp1.volume-=100;
+									Num_Color1=black;
+								}
+								else
+								{
+									para_temp1.volume=1000;
+									Num_Color1=red;
+								}
 								ParaSetDisp();							
 							}
 							else if(buttoms.p10)
 							{
 							 	buttoms.p10=B_OFF;
-								if(para_temp1.heart_beat<=190)
+								if(para_temp1.heart_beat<190)
+								{
 									para_temp1.heart_beat+=10;
+									Num_Color2=black;
+								}
+								else
+								{
+									para_temp1.heart_beat=200;
+									Num_Color2=red;
+								}
 								ParaSetDisp();
 							}
 							else if(buttoms.m10)
 							{
 							 	buttoms.m10=B_OFF;
-								if(para_temp1.heart_beat>=11)
+								if(para_temp1.heart_beat>11)
+								{
 									para_temp1.heart_beat-=10;
+									Num_Color2=black;
+								}
+								else
+								{
+									para_temp1.heart_beat=1;
+									Num_Color2=red;
+								}
 								ParaSetDisp();
 							}
 							else if(buttoms.p1)
 							{
 							 	buttoms.p1=B_OFF;
-								if(para_temp1.heart_beat<=199)
+								if(para_temp1.heart_beat<199)
+								{
 									para_temp1.heart_beat+=1;
+									Num_Color2=black;
+								}
+								else
+								{
+									para_temp1.heart_beat=200;
+									Num_Color2=red;
+								}
 								ParaSetDisp();
 							}
 							else if(buttoms.m1)
 							{
 							 	buttoms.m1=B_OFF;
-								if(para_temp1.heart_beat>=2)
+								if(para_temp1.heart_beat>2)
+								{	
 									para_temp1.heart_beat-=1;
+									Num_Color2=black;
+								}
+								else
+								{
+									para_temp1.heart_beat=1;
+									Num_Color2=red;
+								}
 								ParaSetDisp();
 							}
 							else if(buttoms.p01)
 							{
 							 	buttoms.p01=B_OFF;
-								if(para_temp1.compress_ratio<2)
-									para_temp1.compress_ratio+=0.1;
+								para_temp1.compress_ratio+=0.1;
+								if(para_temp1.compress_ratio>=1.95)
+								{
+									para_temp1.compress_ratio=2.0;
+									Num_Color3=red;
+								}
+								else  Num_Color3=black;
 								ParaSetDisp();
 							}
 							else if(buttoms.m01)
 							{
 							 	buttoms.m01=B_OFF;
-								if(para_temp1.compress_ratio>1)
-									para_temp1.compress_ratio-=0.1;
+								para_temp1.compress_ratio-=0.1;
+								if(para_temp1.compress_ratio<=1.1)
+								{
+									para_temp1.compress_ratio=1.0;
+									Num_Color3=red;
+									Uart_Printf("num=%d\n", para_temp1.compress_ratio);
+								}
+								else  Num_Color3=black;
 								ParaSetDisp();
 							} 
 						}
@@ -673,7 +751,10 @@ void default_values()
 	heart_stat.ClosePoint = 0;
 	heart_stat.delt[0] = 0;	 //delta值，[0]上一次的值，[1]现值
 	heart_stat.delt[1] = 0;
-	heart_stat.rate = 0;	//心率 
+	heart_stat.rate = 0;	//心率
+	Num_Color1 = black;
+	Num_Color2 = black;
+	Num_Color3 = red; 
 }
 
 uint default_hardware()
@@ -859,24 +940,23 @@ void ParaSetDisp(void)
 	unsigned int x2=360;
 	unsigned int x3=570;
 	unsigned int y=150;
-	unsigned int c=0;
 	unsigned int bk_c=0xffff;
 	int ratio_print;
 	ratio_print=para_temp1.compress_ratio*10;
 	Glib_FilledRectangle(330,150,445,200,0xffff);
 	if(para_temp1.heart_beat<10)
 	{
-		OUT_NUM(x2+10,y,para_temp1.heart_beat,c,bk_c,0);
+		OUT_NUM(x2+10,y,para_temp1.heart_beat,Num_Color2,bk_c,0);
 	}
 	else if((para_temp1.heart_beat>=10)&&(para_temp1.heart_beat<100))
 	{	
-		OUT_NUM(x2,y,para_temp1.heart_beat,c,bk_c,0);
+		OUT_NUM(x2,y,para_temp1.heart_beat,Num_Color2,bk_c,0);
 	}
 	else
 	{
-		OUT_NUM(x2-10,y,para_temp1.heart_beat,c,bk_c,0);
+		OUT_NUM(x2-10,y,para_temp1.heart_beat,Num_Color2,bk_c,0);
 	}
-	OUT_NUM(x1,y,para_temp1.volume,c,bk_c,0);
-	OUT_NUM(x3,y,ratio_print,c,bk_c,0);
-	Glib_FilledRectangle(591,188,594,192,0);
+	OUT_NUM(x1,y,para_temp1.volume,Num_Color1,bk_c,0);
+	OUT_NUM(x3,y,ratio_print,Num_Color3,bk_c,0);
+	Glib_FilledRectangle(591,188,594,192,Num_Color3);
 }
